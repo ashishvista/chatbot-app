@@ -297,7 +297,7 @@ class RAGPipeline:
                 trust_remote_code=True
             )
             
-            # Create text generation pipeline
+            # Create text generation pipeline with improved settings for QA
             pipe = pipeline(
                 "text-generation",
                 model=model,
@@ -307,23 +307,17 @@ class RAGPipeline:
                 temperature=settings.TEMPERATURE,          # Control creativity
                 top_p=settings.TOP_P,                     # Nucleus sampling
                 repetition_penalty=1.1,                   # Avoid repetition
-                return_full_text=False                     # Return only new text
+                return_full_text=False,                    # Return only new text
+                pad_token_id=tokenizer.eos_token_id,      # Proper padding
+                eos_token_id=tokenizer.eos_token_id       # Proper end token
             )
             
-            # Wrap in LangChain for compatibility
+            # Use standard HuggingFace pipeline instead of custom wrapper
             self.llm = HuggingFacePipeline(pipeline=pipe)
             
         except Exception as e:
             logger.error(f"❌ Error loading model: {str(e)}")
-            # Fallback to a simpler, smaller model
-            logger.info("🔄 Falling back to simpler model...")
-            pipe = pipeline(
-                "text-generation",
-                model="microsoft/DialoGPT-small",
-                max_new_tokens=256,
-                return_full_text=False
-            )
-            self.llm = HuggingFacePipeline(pipeline=pipe)
+            raise
     
     def _setup_qa_chain(self):
         """
@@ -349,13 +343,28 @@ class RAGPipeline:
             search_kwargs={"k": settings.RETRIEVAL_K}   # Retrieve top K documents
         )
         
+        # Custom prompt template for better DialoGPT compatibility
+        from langchain.prompts import PromptTemplate
+        template = """Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+
+{context}
+
+Question: {question}
+Answer:"""
+        
+        qa_prompt = PromptTemplate(
+            template=template,
+            input_variables=["context", "question"]
+        )
+        
         # Create the QA chain that ties everything together
         self.qa_chain = RetrievalQA.from_chain_type(
             llm=self.llm,                               # Language model for generation
             chain_type="stuff",                         # How to combine retrieved docs
             retriever=retriever,                        # Document retriever
             return_source_documents=True,               # Include sources in response
-            verbose=settings.DEBUG_MODE                 # Enable detailed logging
+            verbose=settings.DEBUG_MODE,                # Enable detailed logging
+            chain_type_kwargs={"prompt": qa_prompt}     # Use custom prompt
         )
     
     def generate_response(self, query: str) -> str:

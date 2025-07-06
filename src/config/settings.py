@@ -46,12 +46,12 @@ class Settings(BaseSettings):
     # These settings control which AI models are used
     
     # Primary language model for text generation
-    # DialoGPT is optimized for conversational responses
-    MODEL_NAME: str = "microsoft/DialoGPT-medium"
+    # FLAN-T5 is specifically designed for instruction-following and Q&A
+    MODEL_NAME: str = "google/flan-t5-base"
     
     # Embedding model for document vectorization
-    # all-MiniLM-L6-v2 provides good quality embeddings with reasonable speed
-    EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
+    # MPNet provides better semantic understanding than MiniLM
+    EMBEDDING_MODEL: str = "sentence-transformers/all-mpnet-base-v2"
     
     # Directory to cache downloaded models
     # Use relative path from project root, not from src directory
@@ -93,16 +93,16 @@ class Settings(BaseSettings):
     RETRIEVAL_K: int = 4
     
     # Maximum number of new tokens to generate in responses
-    MAX_NEW_TOKENS: int = 512
+    MAX_NEW_TOKENS: int = 256  # T5 works better with shorter outputs
     
     # Temperature for text generation (0.0 = deterministic, 1.0 = creative)
-    TEMPERATURE: float = 0.7
+    TEMPERATURE: float = 0.3   # Lower temperature for more focused answers
     
     # Top-p sampling parameter for nucleus sampling
     TOP_P: float = 0.9
     
     # === System Configuration ===
-    DEBUG_MODE: bool = False  # Enable detailed logging
+    DEBUG_MODE: bool = True  # Enable detailed logging
     DEVICE: str = "auto"  # auto, cpu, cuda - determines hardware acceleration
     
     class Config:
