@@ -80,17 +80,18 @@ class Settings(BaseSettings):
     VECTOR_STORE_PATH: str = "../data/vector_store"
     
     # Size of text chunks when splitting documents
-    # Larger chunks preserve more context but may exceed model limits
-    CHUNK_SIZE: int = 1000
+    # Smaller chunks for T5 models with limited context
+    CHUNK_SIZE: int = 400
     
     # Overlap between consecutive chunks to maintain continuity
-    CHUNK_OVERLAP: int = 200
+    CHUNK_OVERLAP: int = 50
     
     # === RAG Pipeline Configuration ===
     # These settings control the retrieval and generation behavior
     
     # Number of similar documents to retrieve for each query
-    RETRIEVAL_K: int = 4
+    # Reduced for T5 models to stay within token limits
+    RETRIEVAL_K: int = 2
     
     # Maximum number of new tokens to generate in responses
     MAX_NEW_TOKENS: int = 256  # T5 works better with shorter outputs
@@ -102,8 +103,8 @@ class Settings(BaseSettings):
     TOP_P: float = 0.9
     
     # === System Configuration ===
-    DEBUG_MODE: bool = True  # Enable detailed logging
-    DEVICE: str = "auto"  # auto, cpu, cuda - determines hardware acceleration
+    DEBUG_MODE: bool = False  # Disable detailed logging for cleaner output
+    DEVICE: str = "cpu"  # Force CPU usage for stability
     
     class Config:
         """Pydantic configuration class"""

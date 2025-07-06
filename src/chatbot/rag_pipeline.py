@@ -36,7 +36,7 @@ from typing import List, Dict, Any, Optional
 from pathlib import Path
 
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM, pipeline
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -97,15 +97,13 @@ class RAGPipeline:
         Determine the best device to use for model inference
         
         Returns:
-            "cuda" if GPU available and configured, "cpu" otherwise
+            "cpu" for stable operation
             
         This affects performance significantly:
-        - CUDA: Fast inference on GPU (requires NVIDIA GPU + CUDA)
-        - CPU: Slower but works on any machine
+        - CPU: Slower but works on any machine and is more stable
         """
-        if settings.DEVICE == "auto":
-            return "cuda" if torch.cuda.is_available() else "cpu"
-        return settings.DEVICE
+        logger.info("💻 Using CPU for stable operation")
+        return "cpu"
     
     def _initialize_pipeline(self):
         """
@@ -270,18 +268,17 @@ class RAGPipeline:
         3. Create generation pipeline with parameters
         4. Wrap in LangChain interface
         
-        Model: microsoft/DialoGPT-medium
-        - Optimized for conversational responses
-        - Good balance of quality vs speed
-        - Fallback to smaller model if memory issues
+        Model Support:
+        - T5/FLAN-T5: Text-to-text models (use AutoModelForSeq2SeqLM)
+        - GPT models: Causal language models (use AutoModelForCausalLM)
         
         Generation Parameters:
         - max_new_tokens: Limit response length
-        - temperature: Control randomness (0.7 = balanced)
+        - temperature: Control randomness (0.3 = focused for Q&A)
         - top_p: Nucleus sampling for coherent responses
-        - repetition_penalty: Avoid repetitive text
         """
         logger.info(f"🤖 Loading language model: {self.model_name}")
+        logger.info(f"🔧 Using device: {self.device}")
         
         try:
             # Load tokenizer for text preprocessing
@@ -289,31 +286,54 @@ class RAGPipeline:
             if tokenizer.pad_token is None:
                 tokenizer.pad_token = tokenizer.eos_token
             
-            # Load the actual neural network model
-            model = AutoModelForCausalLM.from_pretrained(
-                self.model_name,
-                torch_dtype=torch.float16 if self.device == "cuda" else torch.float32,
-                device_map="auto" if self.device == "cuda" else None,
-                trust_remote_code=True
-            )
+            # Determine if this is a T5-based model or causal LM
+            is_t5_model = any(model_type in self.model_name.lower() for model_type in ['t5', 'flan'])
             
-            # Create text generation pipeline with improved settings for QA
-            pipe = pipeline(
-                "text-generation",
-                model=model,
-                tokenizer=tokenizer,
-                max_new_tokens=settings.MAX_NEW_TOKENS,    # Max response length
-                do_sample=True,                            # Enable sampling
-                temperature=settings.TEMPERATURE,          # Control creativity
-                top_p=settings.TOP_P,                     # Nucleus sampling
-                repetition_penalty=1.1,                   # Avoid repetition
-                return_full_text=False,                    # Return only new text
-                pad_token_id=tokenizer.eos_token_id,      # Proper padding
-                eos_token_id=tokenizer.eos_token_id       # Proper end token
-            )
+            # Load the appropriate model type
+            if is_t5_model:
+                logger.info("📝 Loading T5/FLAN-T5 text-to-text model")
+                model = AutoModelForSeq2SeqLM.from_pretrained(
+                    self.model_name,
+                    torch_dtype=torch.float32,  # Use float32 for CPU
+                    trust_remote_code=True
+                )
+                task = "text2text-generation"
+            else:
+                logger.info("💬 Loading causal language model")
+                model = AutoModelForCausalLM.from_pretrained(
+                    self.model_name,
+                    torch_dtype=torch.float32,  # Use float32 for CPU
+                    trust_remote_code=True
+                )
+                task = "text-generation"
             
-            # Use standard HuggingFace pipeline instead of custom wrapper
+            # Create generation pipeline with CPU-optimized settings
+            pipeline_kwargs = {
+                "model": model,
+                "tokenizer": tokenizer,
+                "max_new_tokens": settings.MAX_NEW_TOKENS,
+                "do_sample": True,
+                "temperature": settings.TEMPERATURE,
+                "top_p": settings.TOP_P,
+                "pad_token_id": tokenizer.eos_token_id,
+                "device": -1,  # Force CPU usage
+            }
+            
+            # Add task-specific parameters
+            if is_t5_model:
+                # T5 models don't need return_full_text parameter
+                pass
+            else:
+                pipeline_kwargs.update({
+                    "return_full_text": False,  # Return only new text
+                    "repetition_penalty": 1.1,
+                    "eos_token_id": tokenizer.eos_token_id,
+                })
+            
+            pipe = pipeline(task, **pipeline_kwargs)
             self.llm = HuggingFacePipeline(pipeline=pipe)
+            
+            logger.info(f"✅ Model loaded successfully on CPU")
             
         except Exception as e:
             logger.error(f"❌ Error loading model: {str(e)}")
@@ -419,7 +439,9 @@ Answer:"""
             return formatted_response
             
         except Exception as e:
-            logger.error(f"❌ Error generating response: {str(e)}")
+            import traceback
+            error_msg = f"Error: {str(e)}\nTraceback: {traceback.format_exc()}"
+            logger.error(f"❌ Error generating response: {error_msg}")
             return f"Sorry, I encountered an error while processing your question: {str(e)}"
     
     def _format_response(self, response: str, sources: List[Document]) -> str:
