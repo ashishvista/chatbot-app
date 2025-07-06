@@ -1,5 +1,20 @@
 """
 Vector store utilities for the RAG chatbot
+
+This module provides comprehensive vector store management for the pediatric RAG chatbot.
+It handles document embedding, storage, and retrieval using FAISS (Facebook AI Similarity Search)
+as the backend vector database.
+
+Key Features:
+- Efficient document embedding using HuggingFace models
+- FAISS-based vector storage for fast similarity search
+- Support for incremental document addition
+- Persistence (save/load) for vector stores
+- Similarity search with relevance scoring
+- Memory-efficient operations for large document collections
+
+The VectorStore class abstracts the complexity of working with embeddings and provides
+a clean interface for the RAG pipeline to store and retrieve relevant documents.
 """
 
 import os
@@ -7,35 +22,97 @@ import logging
 from typing import List, Optional
 from pathlib import Path
 
+# LangChain imports for document handling and vector operations
 from langchain.schema import Document
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
-import numpy as np
+from langchain_community.embeddings import HuggingFaceEmbeddings  # For creating embeddings
+from langchain_community.vectorstores import FAISS               # Facebook AI Similarity Search
+import numpy as np                                                # Numerical operations
 
+# Set up logging for this module
 logger = logging.getLogger(__name__)
 
 class VectorStore:
-    """Enhanced vector store manager with FAISS backend"""
+    """
+    Enhanced vector store manager with FAISS backend
+    
+    This class provides a comprehensive interface for managing document embeddings
+    in a FAISS vector database. It's designed specifically for RAG applications
+    where quick similarity search over large document collections is essential.
+    
+    Key capabilities:
+    1. Document Embedding: Converts text documents into high-dimensional vectors
+    2. Efficient Storage: Uses FAISS for optimized vector storage and retrieval
+    3. Similarity Search: Finds documents semantically similar to queries
+    4. Persistence: Save and load vector stores to/from disk
+    5. Incremental Updates: Add new documents to existing stores
+    
+    The embedding model converts text into numerical vectors that capture semantic meaning.
+    Documents with similar meanings will have similar vector representations, enabling
+    effective semantic search for the RAG system.
+    """
     
     def __init__(self, embedding_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
+        """
+        Initialize the VectorStore with specified embedding model
+        
+        Args:
+            embedding_model_name (str): Name of the HuggingFace embedding model
+                                      Default: "sentence-transformers/all-MiniLM-L6-v2"
+                                      - Fast, lightweight, good for general text
+                                      - Other options: "all-mpnet-base-v2" (higher quality)
+        
+        The embedding model is crucial for RAG performance:
+        - Larger models: Better semantic understanding, slower processing
+        - Smaller models: Faster processing, adequate for most use cases
+        - Sentence transformers: Optimized for semantic similarity tasks
+        """
         self.embedding_model_name = embedding_model_name
+        
+        # Initialize HuggingFace embeddings with specified configuration
         self.embeddings = HuggingFaceEmbeddings(
             model_name=embedding_model_name,
-            model_kwargs={'device': 'cpu'},  # Can be changed to 'cuda' if GPU available
-            encode_kwargs={'normalize_embeddings': True}
+            model_kwargs={'device': 'cpu'},              # Use CPU (change to 'cuda' for GPU)
+            encode_kwargs={'normalize_embeddings': True}  # L2 normalization for better similarity
         )
+        
+        # Vector store instance (initialized when documents are added)
         self.vector_store = None
+        
         logger.info(f"Initialized VectorStore with embedding model: {embedding_model_name}")
     
     def create_from_documents(self, documents: List[Document]) -> bool:
-        """Create vector store from a list of documents"""
+        """
+        Create vector store from a list of Document objects
+        
+        This method creates a new FAISS vector store from a collection of LangChain Document objects.
+        It embeds all documents using the configured embedding model and builds an index for
+        fast similarity search.
+        
+        Args:
+            documents (List[Document]): List of LangChain Document objects to embed
+            
+        Returns:
+            bool: True if successful, False if error occurred
+            
+        Process:
+        1. Convert documents to embeddings using the HuggingFace model
+        2. Create FAISS index for efficient similarity search
+        3. Store both embeddings and original document content
+        """
         try:
             if not documents:
                 logger.warning("No documents provided to create vector store")
                 return False
             
             logger.info(f"Creating vector store from {len(documents)} documents...")
+            
+            # FAISS.from_documents handles the embedding process internally:
+            # 1. Extracts text content from Document objects
+            # 2. Converts text to embeddings using the embedding model
+            # 3. Builds FAISS index for fast similarity search
+            # 4. Associates embeddings with original document metadata
             self.vector_store = FAISS.from_documents(documents, self.embeddings)
+            
             logger.info("✅ Vector store created successfully")
             return True
             
