@@ -1,0 +1,181 @@
+Patient Medical History Report
+Baby Lucas Anderson - 9 Months (Premature Birth)
+
+Patient Information:
+Name: Lucas James Anderson
+Date of Birth: October 6, 2024 (Born at 32 weeks gestation)
+Corrected Age: 9 months (Chronological age: 11 months)
+Gender: Male
+Parents: Amanda and Kevin Anderson
+Pediatrician: Dr. Patricia Kim, MD
+Neonatologist: Dr. Robert Hayes, MD
+Medical Record #: BA-2024-1006
+
+Birth History:
+Birth Weight: 3 lbs 12 oz (1.7 kg) - appropriate for gestational age
+Birth Length: 16.5 inches (41.9 cm)
+Head Circumference: 11.8 inches (30 cm)
+Gestational Age: 32 weeks, 2 days
+Delivery: Emergency cesarean section due to preeclampsia
+APGAR Scores: 6 at 1 minute, 8 at 5 minutes
+NICU Stay: 6 weeks
+Discharge Weight: 5 lbs 8 oz
+
+Neonatal Complications:
+- Respiratory Distress Syndrome (RDS) - required CPAP for 2 weeks
+- Apnea of prematurity - resolved by discharge
+- Feeding difficulties - required NG tube initially
+- Jaundice requiring phototherapy
+- Patent ductus arteriosus (PDA) - closed spontaneously
+
+Feeding History:
+NICU: Started with IV nutrition, progressed to breast milk via NG tube
+0-2 months (corrected): Breastfeeding with some bottle supplementation
+2-6 months (corrected): Primarily breastfeeding, fortified with preemie formula
+6-9 months (corrected): Continued breastfeeding, introduction of solid foods
+Current: Breastfeeding with solid foods, high-calorie supplementation
+
+Growth History (Corrected Age):
+Discharge (36 weeks GA): 5 lbs 8 oz, 18 inches
+2 months corrected: 8 lbs 12 oz, 20.5 inches
+4 months corrected: 12 lbs 4 oz, 23 inches
+6 months corrected: 14 lbs 8 oz, 24.5 inches
+9 months corrected: 17 lbs 2 oz, 26.5 inches
+
+Current growth percentiles (corrected age):
+Weight: 25th percentile
+Height: 30th percentile
+Head circumference: 35th percentile
+
+Developmental Milestones (Corrected Age):
+
+Motor Development:
+✓ Held head up (8 weeks corrected)
+✓ Rolled tummy to back (5 months corrected)
+✓ Rolled back to tummy (6.5 months corrected)
+✓ Sits with support (6 months corrected)
+✓ Transfers objects hand to hand (7 months corrected)
+○ Sitting without support (working on this - 9 months corrected)
+○ Crawling (not yet achieved)
+
+Language Development:
+✓ First social smile (10 weeks corrected)
+✓ Cooing sounds (12 weeks corrected)
+✓ Laughs (5 months corrected)
+✓ Babbling with consonants (7 months corrected)
+✓ Responds to name (8.5 months corrected)
+
+Social/Emotional Development:
+✓ Recognizes parents (8 weeks corrected)
+✓ Shows stranger awareness (6 months corrected)
+✓ Enjoys social interaction (7 months corrected)
+✓ Shows excitement for familiar people (9 months corrected)
+
+Cognitive Development:
+✓ Visual tracking (6 weeks corrected)
+✓ Reaches for objects (5 months corrected)
+✓ Explores objects with mouth (6.5 months corrected)
+✓ Shows curiosity about environment (8 months corrected)
+○ Object permanence (emerging at 9 months corrected)
+
+Vaccination Record (Chronological Age):
+✓ Hepatitis B: Birth (in NICU), 2 months, 6 months
+✓ DTaP: 2 months, 4 months, 6 months
+✓ IPV: 2 months, 4 months, 6 months
+✓ Hib: 2 months, 4 months, 6 months
+✓ PCV13: 2 months, 4 months, 6 months
+✓ Rotavirus: 2 months, 4 months, 6 months
+✓ Influenza: Annual (received at 6 months chronological)
+✓ RSV prevention: Synagis injections during RSV season
+
+Medical History:
+
+Ongoing Issues:
+- Chronic lung disease of prematurity (mild) - improving
+- Gastroesophageal reflux - managed with positioning and small feeds
+- Iron deficiency anemia - treated with iron supplementation
+- Slight developmental delays (appropriate for prematurity)
+
+Recent Illnesses:
+- Upper respiratory infection (8 months chronological) - closely monitored
+- Thrush (5 months chronological) - treated with antifungal medication
+
+Allergies:
+No known allergies
+
+Medications:
+- Iron supplement daily
+- Vitamin D drops
+- Reflux medication (ranitidine) as needed
+- Albuterol inhaler (as needed for wheezing)
+
+Hospitalizations:
+- Birth: 6-week NICU stay
+- 7 months chronological: 2-day admission for RSV bronchiolitis
+
+Specialist Care:
+- Neonatology follow-up: Every 3 months until 2 years
+- Ophthalmology: Annual ROP screening (normal so far)
+- Early intervention services: Physical and occupational therapy
+- Pulmonology: For chronic lung disease monitoring
+
+Current Health Status (9 months corrected age):
+
+Physical Examination:
+- General appearance: Alert, interactive infant
+- Weight: 17 lbs 2 oz (25th percentile corrected age)
+- Height: 26.5 inches (30th percentile corrected age)
+- Head circumference: 17.5 inches (35th percentile corrected age)
+- Temperature: 98.4°F
+- Heart rate: 125 bpm
+- Respiratory rate: 32/min
+- Oxygen saturation: 98% on room air
+
+Systems Review:
+- HEENT: Normal, good eye contact, responds to sounds
+- Cardiovascular: Regular rate and rhythm, PDA closed
+- Respiratory: Clear breath sounds, no retractions
+- Gastrointestinal: Soft abdomen, minimal reflux symptoms
+- Neurological: Age-appropriate for corrected age
+- Skin: Healthy appearance
+
+Current Concerns/Plan:
+1. Continue high-calorie diet for catch-up growth
+2. Ongoing early intervention therapies
+3. Monitor respiratory status during cold season
+4. Continue iron supplementation
+5. Work on sitting without support
+6. Next visit in 2 months
+
+Developmental Assessment:
+Lucas is progressing well considering his premature birth. His development is appropriate for his corrected age of 9 months. Areas of focus:
+- Catch-up growth progressing steadily
+- Motor skills developing at expected pace for corrected age
+- Social interaction excellent
+- Respiratory health stable
+
+Early Intervention Services:
+- Physical therapy: 2x weekly for motor development
+- Occupational therapy: 1x weekly for feeding and fine motor skills
+- Developmental monitoring: Monthly assessments
+
+Parent Education Provided:
+- Corrected age vs. chronological age development
+- Importance of early intervention
+- Respiratory illness prevention (RSV, flu)
+- Nutrition for catch-up growth
+- When to call with concerns
+
+Follow-up:
+- 2 months for regular check-up
+- Neonatology in 3 months
+- Early intervention team weekly
+- Ophthalmology in 6 months
+- Emergency plan for respiratory symptoms
+
+Provider Notes:
+Lucas continues to make excellent progress despite his premature start. Parents are very engaged with his care and therapy services. His development is right on track for his corrected age. Continue current management plan with close monitoring.
+
+Dr. Patricia Kim, MD
+Board Certified Pediatrician
+Date: July 6, 2025

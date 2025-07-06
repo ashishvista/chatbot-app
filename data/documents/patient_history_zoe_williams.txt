@@ -1,0 +1,196 @@
+Patient Medical History Report
+Baby Zoe Williams - 15 Months (Developmental Concerns)
+
+Patient Information:
+Name: Zoe Marie Williams
+Date of Birth: April 6, 2024
+Age: 15 months
+Gender: Female
+Parents: Michelle and James Williams
+Pediatrician: Dr. Rachel Thompson, MD
+Medical Record #: BW-2024-0406
+
+Birth History:
+Birth Weight: 7 lbs 11 oz (3.5 kg)
+Birth Length: 20.8 inches (52.8 cm)
+Head Circumference: 13.9 inches (35.3 cm)
+Gestational Age: 39 weeks, 6 days
+Delivery: Vaginal delivery, no complications
+APGAR Scores: 9 at 1 minute, 9 at 5 minutes
+Hospital Stay: 2 days, routine discharge
+
+Feeding History:
+0-4 months: Breastfeeding with some formula supplementation
+4-8 months: Mixed feeding, introduction of solid foods
+8-12 months: Continued breastfeeding, variety of table foods
+12-15 months: Weaning process, whole milk introduction
+Current: Table foods, whole milk, some continued breastfeeding
+
+Growth History:
+Birth: 7 lbs 11 oz, 20.8 inches
+2 months: 11 lbs 8 oz, 22.5 inches
+4 months: 14 lbs 2 oz, 24.2 inches
+6 months: 16 lbs 6 oz, 25.8 inches
+9 months: 18 lbs 12 oz, 27.5 inches
+12 months: 20 lbs 8 oz, 28.8 inches
+15 months: 21 lbs 14 oz, 30.2 inches
+
+Current growth percentiles:
+Weight: 45th percentile
+Height: 50th percentile
+Head circumference: 55th percentile
+
+Developmental Milestones - Concerns Noted:
+
+Motor Development:
+✓ Held head up (6 weeks)
+✓ Rolled over (5 months)
+✓ Sat without support (8 months)
+✓ Crawled (10 months)
+✓ Pulled to standing (12 months)
+○ Walking independently (not achieved at 15 months - CONCERN)
+○ Cruising furniture (limited - started at 14 months)
+
+Language Development:
+✓ First social smile (7 weeks)
+✓ Cooing sounds (10 weeks)
+✓ Babbling (6 months)
+○ Says "mama/dada" specifically (inconsistent at 15 months - CONCERN)
+○ First words (not clearly established - CONCERN)
+○ Points to request items (rarely observed - CONCERN)
+○ Follows simple commands (inconsistent - CONCERN)
+
+Social/Emotional Development:
+✓ Recognizes parents (birth)
+~ Separation anxiety (mild, later than expected - 12 months)
+~ Eye contact (inconsistent - CONCERN)
+○ Shows affection clearly (limited demonstration - CONCERN)
+○ Imitates actions (rarely observed - CONCERN)
+○ Plays simple games (peek-a-boo inconsistent - CONCERN)
+
+Cognitive Development:
+✓ Visual tracking (8 weeks)
+✓ Reaches for objects (5 months)
+~ Object permanence (emerging but delayed - CONCERN)
+○ Problem-solving skills (limited for age - CONCERN)
+○ Pretend play (not observed - CONCERN)
+
+Red Flags Identified:
+- Not walking independently at 15 months
+- Limited vocabulary (fewer than 3 clear words)
+- Inconsistent response to name
+- Limited pointing or gesturing
+- Decreased eye contact and social interaction
+- No clear pretend play
+
+Vaccination Record:
+✓ Complete vaccination schedule up to date
+✓ All routine immunizations current
+✓ No adverse reactions to vaccines
+
+Medical History:
+
+Illnesses:
+- Several minor colds (4 episodes)
+- One ear infection (12 months) - treated with antibiotics
+- Persistent sleep difficulties
+- Feeding challenges with textures
+
+Allergies:
+No known allergies
+
+Medications:
+- Vitamin D drops
+- No regular medications
+
+Hospitalizations:
+None
+
+Emergency Department Visits:
+None
+
+Specialist Consultations:
+- Audiology: Hearing test (normal results)
+- Early intervention evaluation: Scheduled for next week
+- Developmental pediatrician: Referral made
+
+Current Health Status (15-month visit):
+
+Physical Examination:
+- General appearance: Quiet, less interactive than expected
+- Weight: 21 lbs 14 oz (45th percentile)
+- Height: 30.2 inches (50th percentile)
+- Head circumference: 18.3 inches (55th percentile)
+- Temperature: 98.6°F
+- Heart rate: 110 bpm
+- Respiratory rate: 26/min
+
+Systems Review:
+- HEENT: Normal physical exam, hearing test normal
+- Cardiovascular: Regular rate and rhythm
+- Respiratory: Clear breath sounds
+- Gastrointestinal: Good appetite, normal bowel function
+- Neurological: Muscle tone appropriate, reflexes normal
+- Skin: Healthy appearance
+
+Developmental Assessment:
+Zoe shows several areas of concern for her age:
+- Gross motor: Delayed walking (should walk by 15 months)
+- Language: Significantly delayed (should have 10+ words)
+- Social: Reduced eye contact and social reciprocity
+- Cognitive: Limited problem-solving and pretend play
+
+Screening Tools Used:
+- M-CHAT-R: Positive for several autism spectrum concerns
+- ASQ-3: Below average in communication and social domains
+- Denver Developmental Screening: Delays noted
+
+Current Plan and Interventions:
+
+Immediate Actions:
+1. Early intervention referral (completed)
+2. Developmental pediatrician consultation (scheduled)
+3. Comprehensive autism spectrum evaluation
+4. Physical therapy evaluation for walking delay
+5. Speech therapy evaluation
+
+Follow-up Schedule:
+- 2 weeks: Early intervention assessment
+- 1 month: Developmental pediatrician
+- 6 weeks: Follow-up with primary care
+- Ongoing: Specialist recommendations
+
+Parent Education and Support:
+- Information about developmental delays
+- Early intervention services explanation
+- Home activities to encourage development
+- Support group resources
+- Importance of early intervention
+
+Safety Considerations:
+- Continue childproofing as mobility develops
+- Consider gait training equipment if recommended
+- Monitor for self-injurious behaviors
+
+Provider Notes:
+Zoe presents with multiple developmental delays that warrant comprehensive evaluation. While some children develop at different paces, the combination of gross motor, language, and social delays requires immediate attention. Early intervention services are crucial. Parents are receptive and committed to supporting Zoe's development.
+
+The delays could represent:
+- Global developmental delay
+- Autism spectrum disorder
+- Specific language disorder
+- Motor planning difficulties
+- Other neurodevelopmental conditions
+
+Comprehensive evaluation will help determine the best intervention approach.
+
+Dr. Rachel Thompson, MD
+Board Certified Pediatrician
+Date: July 6, 2025
+
+Follow-up Plan:
+- Intensive early intervention services
+- Regular developmental monitoring
+- Family support and education
+- Coordinate care between specialists
+- Reassess progress in 3 months

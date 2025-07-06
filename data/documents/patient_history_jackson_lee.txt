@@ -1,0 +1,269 @@
+Patient Medical History Report
+Jackson Lee - 3 Years
+
+Patient Information:
+Name: Jackson Wei Lee
+Date of Birth: February 20, 2022
+Age: 3 years, 4 months
+Gender: Male
+Parents: Dr. Sarah Lee and David Lee
+Pediatrician: Dr. Amanda Foster, MD
+Medical Record #: JL-2022-0220
+
+Birth History:
+Birth Weight: 8 lbs 1 oz (3.6 kg)
+Birth Length: 21 inches (53.3 cm)
+Head Circumference: 14.2 inches (36 cm)
+Gestational Age: 40 weeks, 1 day
+Delivery: Vaginal delivery with epidural
+APGAR Scores: 9 at 1 minute, 9 at 5 minutes
+Hospital Stay: 48 hours, routine discharge
+Birth complications: None
+
+Early Feeding History:
+0-3 months: Exclusive breastfeeding
+3-6 months: Breastfeeding with formula supplementation
+6-12 months: Combination feeding with solids introduction
+12 months: Weaned to whole milk and table foods
+
+Current Diet (3 years):
+- Three regular meals plus 2 healthy snacks daily
+- Whole milk 16 oz daily
+- Balanced diet including fruits, vegetables, grains, proteins
+- Some selective eating typical for age (prefers pasta, fruit, crackers)
+- Uses utensils independently
+- Beginning to help with simple food preparation
+
+Growth History:
+Birth: 8 lbs 1 oz, 21 inches
+2 months: 12 lbs, 23 inches
+6 months: 17 lbs, 26 inches
+12 months: 22 lbs, 30 inches
+18 months: 25 lbs, 32 inches
+24 months: 28 lbs, 34 inches
+30 months: 30 lbs, 36 inches
+36 months: 32 lbs, 37.5 inches
+
+Current growth percentiles:
+Weight: 55th percentile
+Height: 60th percentile
+Head circumference: 50th percentile
+
+Developmental Milestones Achieved:
+
+Gross Motor Development:
+✓ All infant milestones achieved on time
+✓ Walked independently (12 months)
+✓ Ran well (18 months)
+✓ Climbed stairs alternating feet (24 months)
+✓ Jumped with both feet (30 months)
+✓ Pedaled tricycle (34 months)
+✓ Hopped on one foot briefly (36 months)
+✓ Caught large ball (36 months)
+
+Fine Motor Development:
+✓ Stacked 6+ blocks (18 months)
+✓ Scribbled spontaneously (20 months)
+✓ Built tower of 8 blocks (24 months)
+✓ Copied circle (30 months)
+✓ Drew person with 3 parts (36 months)
+✓ Cut with scissors (supervised, 36 months)
+✓ Buttoned large buttons (36 months)
+
+Language Development:
+✓ First words (10 months)
+✓ 50+ words (18 months)
+✓ Two-word phrases (20 months)
+✓ Three-word sentences (24 months)
+✓ Complex sentences (30 months)
+✓ Clear speech, understandable to strangers (36 months)
+✓ Knows full name and age
+✓ Can sing simple songs
+✓ Tells simple stories
+
+Current language skills:
+- Vocabulary: 1000+ words
+- Speaks in complex sentences
+- Asks "why" questions frequently
+- Follows multi-step instructions
+- Beginning phonetic awareness
+- Knows colors, shapes, numbers 1-10
+
+Social/Emotional Development:
+✓ Separation anxiety resolved (24 months)
+✓ Plays cooperatively with others
+✓ Shows empathy and concern for others
+✓ Expresses wide range of emotions appropriately
+✓ Beginning impulse control
+✓ Enjoys helping with household tasks
+✓ Shows pride in accomplishments
+
+Cognitive Development:
+✓ Pretend play well-developed (cooking, caring for dolls)
+✓ Understands concept of counting (1-10)
+✓ Recognizes letters in name
+✓ Matches and sorts objects by color, shape, size
+✓ Remembers and follows rules
+✓ Problem-solves simple puzzles (12+ pieces)
+✓ Beginning understanding of time concepts
+
+Preschool Readiness:
+- Potty trained (day and night) since 32 months
+- Can dress self with minimal help
+- Follows classroom rules and routines
+- Interacts appropriately with peers and adults
+- Beginning academic skills (letters, numbers)
+
+Vaccination Record:
+✓ Complete vaccination series for age including:
+- All infant vaccines (DTaP, IPV, Hib, PCV13, MMR, Varicella)
+- Hepatitis A series completed
+- Annual influenza vaccines
+- COVID-19 vaccines as per current guidelines
+
+Medical History:
+
+Illnesses and Injuries:
+- Respiratory infections x4 (typical for daycare exposure)
+- Ear infection x1 (18 months, treated with antibiotics)
+- Hand, foot, and mouth disease (2.5 years, mild case)
+- Minor fall injuries (scraped knees, bumps) - no significant trauma
+- Brief febrile seizure (15 months) - evaluated, determined benign
+
+Ongoing Health Issues:
+- Seasonal allergies (spring/fall pollen)
+- Mild asthma triggered by respiratory infections
+- Occasional constipation
+
+Allergies:
+- Environmental: Tree pollen, grass pollen (mild reactions)
+- Food: No known food allergies
+- Medications: No known drug allergies
+
+Current Medications:
+- Children's Claritin during allergy season
+- Albuterol inhaler as needed for wheezing (rarely used)
+- Miralax occasionally for constipation
+
+Hospitalizations:
+Birth hospitalization only
+
+Emergency Department Visits:
+- Age 15 months: Febrile seizure evaluation (discharged same day)
+- Age 2.5 years: Respiratory distress (treated and discharged)
+
+Specialist Consultations:
+- Neurology: Follow-up for febrile seizure (normal EEG, no further follow-up needed)
+- Pulmonology: Asthma evaluation and management plan
+
+Current Health Status (3-year visit):
+
+Physical Examination:
+- General appearance: Active, cooperative, well-nourished child
+- Weight: 32 lbs (55th percentile)
+- Height: 37.5 inches (60th percentile)
+- Head circumference: 19.2 inches (50th percentile)
+- BMI: 15.2 (normal range)
+- Temperature: 98.4°F
+- Heart rate: 100 bpm
+- Respiratory rate: 22/min
+- Blood pressure: 95/60 mmHg
+
+Systems Review:
+- HEENT: Normal exam, 20 teeth erupted, good dental hygiene
+- Cardiovascular: Regular rate and rhythm, no murmurs
+- Respiratory: Clear breath sounds, good air exchange
+- Gastrointestinal: Soft abdomen, regular bowel habits
+- Genitourinary: Normal external genitalia, fully toilet trained
+- Musculoskeletal: Good muscle tone, normal spine curvature
+- Neurological: Age-appropriate development, no focal findings
+- Skin: Clear, no rashes or lesions
+
+Developmental Screening:
+- Ages and Stages Questionnaire (ASQ-3): All domains within normal limits
+- Modified Checklist for Autism in Toddlers (M-CHAT-R): Negative
+- Developmental assessment: Meeting or exceeding all milestones
+
+Vision and Hearing:
+- Vision screening: Passed
+- Hearing screening: Passed
+- No concerns about vision or hearing development
+
+Dental Health:
+- 20 primary teeth erupted
+- Good oral hygiene habits
+- Regular dental visits every 6 months
+- No caries detected
+
+Current Concerns/Plan:
+1. Continue balanced nutrition and physical activity
+2. Monitor seasonal allergies and asthma
+3. Prepare for preschool transition
+4. Encourage continued language and cognitive development
+5. Support social-emotional growth
+
+Sleep Patterns:
+- Night sleep: 10-11 hours (8:00 PM - 7:00 AM)
+- Occasional nap on weekends (1 hour)
+- Generally well-rested and alert
+- Consistent bedtime routine
+
+Preschool Plans:
+- Starting preschool program in fall (3.5 years)
+- Well-prepared developmentally and socially
+- Parents have discussed transition strategies
+
+Behavioral Considerations:
+- Typical 3-year-old behaviors: some defiance, testing limits
+- Generally cooperative and well-behaved
+- Responds well to positive reinforcement
+- Occasional tantrums when tired or frustrated (age-appropriate)
+
+Parent Education Provided:
+- Preschool readiness and transition tips
+- Managing seasonal allergies and asthma
+- Safety for active 3-year-old (playground, street safety)
+- Screen time guidelines for preschoolers
+- Encouraging independence while maintaining safety
+
+Safety Reminders:
+- Car seat safety (still rear-facing until weight/height limits)
+- Bike helmet use for tricycle riding
+- Water safety supervision
+- Poison prevention and childproofing updates
+
+Follow-up:
+- Next routine visit at 4 years
+- Earlier visit if asthma symptoms worsen
+- Developmental screening at 4-year visit
+
+Provider Notes:
+Jackson is a delightful, well-developing 3-year-old who is meeting all developmental milestones appropriately. His mild asthma is well-controlled, and seasonal allergies are managed effectively. Parents are engaged and supportive. He appears ready for preschool transition.
+
+Family History:
+- Maternal: Asthma, seasonal allergies
+- Paternal: No significant medical history
+- Siblings: None currently
+- Extended family: Diabetes (maternal grandmother), heart disease (paternal grandfather)
+
+Developmental Strengths:
+- Excellent language development
+- Strong fine and gross motor skills
+- Good social interaction abilities
+- Curious and eager to learn
+- Creative play and imagination
+
+Areas for Continued Growth:
+- Emotional regulation during frustrating situations
+- Following complex multi-step instructions
+- Preparing for structured learning environment
+
+Next Visit Goals:
+- 4-year developmental assessment
+- School readiness evaluation
+- Vision and hearing screening
+- Growth and nutrition assessment
+
+Dr. Amanda Foster, MD
+Board Certified Pediatrician
+Date: June 20, 2025

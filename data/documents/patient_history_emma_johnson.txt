@@ -1,0 +1,178 @@
+Patient Medical History Report
+Baby Emma Johnson - 18 Months
+
+Patient Information:
+Name: Emma Rose Johnson
+Date of Birth: January 15, 2023
+Age: 18 months
+Gender: Female
+Parents: Sarah and Michael Johnson
+Pediatrician: Dr. Amanda Chen, MD
+Medical Record #: BJ-2023-0115
+
+Birth History:
+Birth Weight: 7 lbs 2 oz (3.2 kg)
+Birth Length: 20 inches (50.8 cm)
+Head Circumference: 13.5 inches (34.3 cm)
+Gestational Age: 39 weeks, 2 days
+Delivery: Vaginal delivery, no complications
+APGAR Scores: 8 at 1 minute, 9 at 5 minutes
+Hospital Stay: 2 days, routine discharge
+
+Feeding History:
+0-4 months: Exclusively breastfed
+4-6 months: Breastfeeding with vitamin D supplementation
+6 months: Introduction of solid foods (rice cereal, pureed fruits/vegetables)
+8 months: Finger foods introduced, continued breastfeeding
+12 months: Transitioned to whole milk, varied table foods
+Current: Eating family foods, drinks whole milk
+
+Growth History:
+Birth: 7 lbs 2 oz, 20 inches
+2 months: 11 lbs 4 oz, 22.5 inches
+4 months: 14 lbs 8 oz, 24.5 inches
+6 months: 16 lbs 12 oz, 26 inches
+9 months: 19 lbs 2 oz, 27.5 inches
+12 months: 21 lbs 6 oz, 29 inches
+15 months: 23 lbs 1 oz, 30.5 inches
+18 months: 24 lbs 8 oz, 31.5 inches
+
+Current growth percentiles:
+Weight: 65th percentile
+Height: 70th percentile
+Head circumference: 60th percentile
+
+Developmental Milestones Achieved:
+
+Motor Development:
+✓ Held head up (2 months)
+✓ Rolled over (5 months)
+✓ Sat without support (7 months)
+✓ Crawled (9 months)
+✓ Pulled to standing (10 months)
+✓ First steps (13 months)
+✓ Walks independently (14 months)
+✓ Runs (17 months)
+✓ Climbs stairs with help (18 months)
+
+Language Development:
+✓ First social smile (6 weeks)
+✓ Cooing sounds (3 months)
+✓ Babbling (6 months)
+✓ Says "mama/dada" (10 months)
+✓ First word "ball" (11 months)
+✓ Points to request (12 months)
+✓ Follows simple commands (14 months)
+✓ Vocabulary of 15 words (18 months)
+✓ Beginning to combine words (18 months)
+
+Social/Emotional Development:
+✓ Recognizes parents (birth)
+✓ Stranger anxiety (8 months)
+✓ Separation anxiety (9 months)
+✓ Plays peek-a-boo (10 months)
+✓ Shows affection (12 months)
+✓ Parallel play (16 months)
+✓ Independence seeking (18 months)
+
+Cognitive Development:
+✓ Visual tracking (2 months)
+✓ Reaches for objects (4 months)
+✓ Object permanence (8 months)
+✓ Imitates actions (12 months)
+✓ Sorts shapes (16 months)
+✓ Pretend play beginning (18 months)
+
+Vaccination Record:
+✓ Hepatitis B: Birth, 2 months, 6 months
+✓ DTaP: 2 months, 4 months, 6 months, 15 months
+✓ IPV: 2 months, 4 months, 6 months
+✓ Hib: 2 months, 4 months, 6 months, 12 months
+✓ PCV13: 2 months, 4 months, 6 months, 12 months
+✓ Rotavirus: 2 months, 4 months, 6 months
+✓ MMR: 12 months
+✓ Varicella: 12 months
+✓ Hepatitis A: 12 months, 18 months
+✓ Influenza: Annual (6 months+)
+
+Medical History:
+
+Minor Illnesses:
+- Mild cold with runny nose (8 months) - resolved without treatment
+- Diaper rash (10 months) - treated with zinc oxide cream
+- Mild fever during teething (12 months) - managed with acetaminophen
+- Upper respiratory infection (16 months) - resolved in 5 days
+
+Allergies:
+No known food or medication allergies
+Mild skin sensitivity to certain detergents
+
+Medications:
+- Vitamin D drops (birth to 12 months)
+- Acetaminophen as needed for teething/fever
+- No regular medications
+
+Hospitalizations:
+None since birth
+
+Emergency Department Visits:
+None
+
+Specialist Consultations:
+None required
+
+Current Health Status (18-month visit):
+
+Physical Examination:
+- General appearance: Well-appearing, active toddler
+- Weight: 24 lbs 8 oz (65th percentile)
+- Height: 31.5 inches (70th percentile)
+- Head circumference: 18.5 inches (60th percentile)
+- Temperature: 98.2°F
+- Heart rate: 110 bpm
+- Respiratory rate: 24/min
+
+Systems Review:
+- HEENT: Normal, good vision tracking, responds to sounds
+- Cardiovascular: Regular rate and rhythm, no murmurs
+- Respiratory: Clear breath sounds bilaterally
+- Gastrointestinal: Soft abdomen, good appetite
+- Genitourinary: Normal external genitalia
+- Musculoskeletal: Good muscle tone, normal gait
+- Neurological: Age-appropriate reflexes and responses
+- Skin: Clear, well-hydrated
+
+Current Concerns/Plan:
+1. Continue current diet with variety of foods
+2. Encourage language development through reading and conversation
+3. Maintain sleep routine (11-12 hours at night, 1-2 hour nap)
+4. Continue safety measures as mobility increases
+5. Next visit at 24 months
+6. Contact office for any concerns
+
+Developmental Assessment:
+Emma is meeting all expected milestones for her age. She demonstrates:
+- Excellent gross motor skills (running, climbing)
+- Age-appropriate fine motor development
+- Good language progression with 15+ words
+- Normal social and emotional development
+- Healthy attachment to parents
+
+Parent Education Provided:
+- Toddler nutrition and feeding
+- Safety measures for active toddler
+- Language development encouragement
+- Behavior management strategies
+- Importance of routine and structure
+
+Follow-up:
+- Routine 24-month well-child visit
+- Earlier visit if concerns arise
+- Continue current feeding and development activities
+
+Provider Notes:
+Emma continues to thrive and develop appropriately. Parents are engaged and following recommendations well. No concerns at this time. Continue current care plan and routine monitoring.
+
+Dr. Amanda Chen, MD
+Board Certified Pediatrician
+Date: July 6, 2024

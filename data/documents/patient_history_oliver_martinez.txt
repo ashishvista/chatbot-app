@@ -1,0 +1,156 @@
+Patient Medical History Report
+Baby Oliver Martinez - 6 Months
+
+Patient Information:
+Name: Oliver James Martinez
+Date of Birth: January 6, 2025
+Age: 6 months
+Gender: Male
+Parents: Maria and Carlos Martinez
+Pediatrician: Dr. Jennifer Liu, MD
+Medical Record #: BM-2025-0106
+
+Birth History:
+Birth Weight: 6 lbs 14 oz (3.1 kg)
+Birth Length: 19.5 inches (49.5 cm)
+Head Circumference: 13.2 inches (33.5 cm)
+Gestational Age: 38 weeks, 4 days
+Delivery: Cesarean section due to breech presentation
+APGAR Scores: 7 at 1 minute, 9 at 5 minutes
+Hospital Stay: 3 days, routine discharge
+Complications: None
+
+Feeding History:
+0-2 months: Formula feeding (mother unable to breastfeed due to medication)
+2-4 months: Iron-fortified formula, good tolerance
+4-6 months: Formula feeding with vitamin D supplementation
+6 months: Beginning introduction of solid foods (rice cereal started 1 week ago)
+
+Growth History:
+Birth: 6 lbs 14 oz, 19.5 inches
+2 weeks: 7 lbs 2 oz, 20 inches
+2 months: 10 lbs 8 oz, 22 inches
+4 months: 13 lbs 4 oz, 24 inches
+6 months: 16 lbs 2 oz, 25.5 inches
+
+Current growth percentiles:
+Weight: 50th percentile
+Height: 45th percentile
+Head circumference: 55th percentile
+
+Developmental Milestones Achieved:
+
+Motor Development:
+✓ Held head up (6 weeks)
+✓ Rolled from tummy to back (4 months)
+✓ Rolled from back to tummy (5 months)
+✓ Sits with support (5.5 months)
+✓ Reaches for and grasps objects (4 months)
+✓ Transfers objects hand to hand (5.5 months)
+◯ Sitting without support (not yet achieved)
+
+Language Development:
+✓ First social smile (8 weeks)
+✓ Cooing sounds (10 weeks)
+✓ Laughs (4 months)
+✓ Babbling with consonants (5.5 months)
+✓ Responds to name (6 months)
+
+Social/Emotional Development:
+✓ Recognizes parents (birth)
+✓ Shows stranger awareness (4 months)
+✓ Enjoys social play (5 months)
+✓ Shows excitement when seeing familiar faces (6 months)
+
+Cognitive Development:
+✓ Visual tracking (8 weeks)
+✓ Reaches for objects (4 months)
+✓ Explores objects with mouth (5 months)
+✓ Shows curiosity about surroundings (6 months)
+
+Vaccination Record:
+✓ Hepatitis B: Birth, 2 months
+✓ DTaP: 2 months, 4 months
+✓ IPV: 2 months, 4 months
+✓ Hib: 2 months, 4 months
+✓ PCV13: 2 months, 4 months
+✓ Rotavirus: 2 months, 4 months
+⏳ 6-month vaccines scheduled for next week
+
+Medical History:
+
+Minor Illnesses:
+- Mild diaper rash (3 months) - resolved with zinc oxide
+- Brief feeding difficulty due to reflux (2 months) - improved with positioning
+- Cradle cap (4 months) - treated with gentle oil massage
+
+Allergies:
+No known allergies
+
+Medications:
+- Vitamin D drops (since 2 weeks)
+- No other regular medications
+
+Hospitalizations:
+None since birth
+
+Emergency Department Visits:
+None
+
+Specialist Consultations:
+None required
+
+Current Health Status (6-month visit):
+
+Physical Examination:
+- General appearance: Alert, interactive infant
+- Weight: 16 lbs 2 oz (50th percentile)
+- Height: 25.5 inches (45th percentile)
+- Head circumference: 17.2 inches (55th percentile)
+- Temperature: 98.6°F
+- Heart rate: 130 bpm
+- Respiratory rate: 30/min
+
+Systems Review:
+- HEENT: Normal, good eye contact, responds to sounds
+- Cardiovascular: Regular rate and rhythm, soft murmur (innocent)
+- Respiratory: Clear breath sounds
+- Gastrointestinal: Soft abdomen, normal bowel sounds
+- Genitourinary: Normal external genitalia
+- Musculoskeletal: Good muscle tone, normal reflexes
+- Neurological: Age-appropriate development
+- Skin: Clear, well-hydrated
+
+Current Concerns/Plan:
+1. Continue current formula feeding
+2. Begin solid food introduction (rice cereal, then vegetables)
+3. Encourage tummy time to strengthen core muscles
+4. Begin sitting practice with support
+5. Complete 6-month vaccinations
+6. Next visit at 9 months
+
+Developmental Assessment:
+Oliver is developing well within normal ranges. Slight delay in sitting without support is not concerning at 6 months. Areas of focus:
+- Excellent fine motor development (grasping, transferring)
+- Good social interaction and recognition
+- Normal language development for age
+- Healthy growth pattern
+
+Parent Education Provided:
+- Solid food introduction guidelines
+- Safety measures for mobile infant
+- Importance of tummy time
+- Sleep safety reminders
+- Signs to watch for regarding development
+
+Follow-up:
+- 9-month well-child visit
+- Call with any feeding concerns
+- Return if fever or illness
+
+Provider Notes:
+Oliver is a healthy, developing infant. Parents are attentive and following recommendations. Continue current care plan. Monitor sitting milestone at next visit.
+
+Dr. Jennifer Liu, MD
+Board Certified Pediatrician
+Date: July 6, 2025

@@ -1,0 +1,247 @@
+Patient Medical History Report
+Maya Patel - 18 Months
+
+Patient Information:
+Name: Maya Arjun Patel
+Date of Birth: January 15, 2024
+Age: 18 months
+Gender: Female
+Parents: Dr. Priya Patel and Arjun Patel
+Pediatrician: Dr. Robert Chen, MD
+Medical Record #: MP-2024-0115
+
+Birth History:
+Birth Weight: 7 lbs 2 oz (3.2 kg)
+Birth Length: 20 inches (50.8 cm)
+Head Circumference: 13.8 inches (35 cm)
+Gestational Age: 39 weeks, 2 days
+Delivery: Vaginal delivery, uncomplicated
+APGAR Scores: 8 at 1 minute, 9 at 5 minutes
+Hospital Stay: 24 hours, routine discharge
+Birth complications: None
+
+Feeding History:
+0-6 months: Exclusive breastfeeding
+6-12 months: Breastfeeding with gradual introduction of solids
+12-18 months: Weaned from breast at 14 months, full table foods
+
+Current Diet:
+- Three meals daily plus 2-3 snacks
+- Whole milk 16-20 oz daily
+- Variety of fruits, vegetables, grains, proteins
+- Cultural foods: rice, dal, chapati, mild curries
+- Self-feeding with utensils (spoon, attempts with fork)
+
+Growth History:
+Birth: 7 lbs 2 oz, 20 inches
+2 weeks: 7 lbs 8 oz, 20.5 inches
+2 months: 10 lbs 4 oz, 22 inches
+6 months: 15 lbs 8 oz, 25.5 inches
+12 months: 20 lbs, 29 inches
+15 months: 22 lbs, 30.5 inches
+18 months: 23 lbs 8 oz, 32 inches
+
+Current growth percentiles:
+Weight: 45th percentile
+Height: 50th percentile
+Head circumference: 55th percentile
+
+Developmental Milestones Achieved:
+
+Gross Motor Development:
+✓ Held head up (6 weeks)
+✓ Rolled over (4 months)
+✓ Sat independently (7 months)
+✓ Crawled (9 months)
+✓ Pulled to stand (11 months)
+✓ Walked independently (13 months)
+✓ Runs with good coordination (17 months)
+✓ Climbs stairs holding rail (18 months)
+✓ Kicks ball forward (18 months)
+
+Fine Motor Development:
+✓ Grasped objects (4 months)
+✓ Pincer grasp (9 months)
+✓ Released objects intentionally (10 months)
+✓ Stacked 2 blocks (12 months)
+✓ Stacked 4+ blocks (15 months)
+✓ Scribbles with crayon (16 months)
+✓ Turns book pages (18 months)
+✓ Uses spoon effectively (18 months)
+
+Language Development:
+✓ First word "Mama" (11 months)
+✓ 3-5 words (12 months)
+✓ 10-15 words (15 months)
+✓ 25+ words current vocabulary
+✓ Beginning two-word combinations "More milk," "Bye-bye Papa"
+✓ Follows simple one-step commands
+✓ Points to body parts when named
+✓ Understands both English and Hindi
+
+Current vocabulary includes:
+English: Mama, Papa, water, milk, more, no, hi, bye-bye, ball, book
+Hindi: Pani (water), Dudh (milk), Namaste, Dada, Nana
+
+Social/Emotional Development:
+✓ Stranger anxiety (8-10 months, resolved)
+✓ Separation anxiety (12-15 months, mild)
+✓ Plays independently (15 minutes)
+✓ Enjoys peek-a-boo and simple games
+✓ Shows affection to family members
+✓ Beginning parallel play with other children
+✓ Expresses emotions clearly (happy, frustrated, excited)
+
+Cognitive Development:
+✓ Object permanence (8 months)
+✓ Cause and effect understanding (12 months)
+✓ Imitates actions and sounds (15 months)
+✓ Pretend play beginning (feeding doll, talking on phone)
+✓ Sorts shapes into simple shape sorter
+✓ Points to pictures in books when named
+
+Vaccination Record:
+✓ Complete for age including:
+- Hepatitis B series (birth, 2, 6 months)
+- DTaP (2, 4, 6, 15 months)
+- IPV (2, 4, 6-18 months)
+- Hib (2, 4, 6, 12-15 months)
+- PCV13 (2, 4, 6, 12-15 months)
+- MMR (12 months)
+- Varicella (12 months)
+- Hepatitis A (12 months, second dose at 18 months)
+✓ Seasonal influenza annually
+
+Medical History:
+
+Illnesses:
+- Common cold x3 (6, 10, 16 months) - resolved without complications
+- Mild stomach bug (14 months) - brief vomiting, good recovery
+- Roseola (8 months) - typical course with fever then rash
+
+Current Health Issues:
+- Eczema on arms and legs (mild, managed with moisturizer)
+- Seasonal congestion (family history of allergies)
+
+Allergies:
+- No food allergies identified
+- Environmental: mild reaction to tree pollen (spring)
+- No medication allergies
+
+Medications:
+- Multivitamin with iron (Poly-Vi-Sol)
+- Moisturizing cream for eczema as needed
+- No regular medications
+
+Hospitalizations:
+Birth hospitalization only
+
+Emergency Department Visits:
+None
+
+Specialist Consultations:
+- Dermatology consultation at 15 months for eczema management
+- Recommendations: gentle skincare routine, mild topical treatments
+
+Current Health Status (18-month visit):
+
+Physical Examination:
+- General appearance: Active, happy, well-developed toddler
+- Weight: 23 lbs 8 oz (45th percentile)
+- Height: 32 inches (50th percentile)
+- Head circumference: 18.5 inches (55th percentile)
+- Temperature: 98.6°F
+- Heart rate: 110 bpm
+- Respiratory rate: 24/min
+- Blood pressure: 95/60 mmHg
+
+Systems Review:
+- HEENT: Normal tympanic membranes, good dental hygiene, 12 teeth erupted
+- Cardiovascular: Regular rate and rhythm, no murmurs
+- Respiratory: Clear breath sounds bilaterally
+- Gastrointestinal: Soft abdomen, normal bowel habits
+- Genitourinary: Normal external genitalia
+- Musculoskeletal: Good muscle tone, normal gait
+- Neurological: Age-appropriate reflexes and development
+- Skin: Mild eczema on extremities, otherwise clear
+
+Developmental Screening (M-CHAT-R):
+- All items within normal limits
+- No autism spectrum concerns
+- Excellent social communication
+- Age-appropriate play and interaction
+
+Current Concerns/Plan:
+1. Continue balanced nutrition with cultural foods
+2. Encourage language development in both languages
+3. Promote independent play and social interaction
+4. Manage eczema with gentle skin care
+5. Dental care: brush twice daily, first dental visit recommended
+
+Sleep Patterns:
+- Night sleep: 11-12 hours (7:30 PM - 7:00 AM)
+- One afternoon nap: 1.5-2 hours
+- Total sleep: 13-14 hours per day
+- Consistent bedtime routine
+
+Toilet Training:
+- Not yet started
+- Shows some signs of readiness (staying dry longer, interest in bathroom)
+- Plan to begin in 2-3 months
+
+Developmental Assessment:
+Maya is exceeding expectations in most developmental areas:
+- Gross motor: Advanced (running, climbing)
+- Fine motor: Age-appropriate to slightly advanced
+- Language: Excellent bilingual development
+- Social: Strong family attachments, beginning peer interaction
+- Cognitive: Curious, problem-solving skills emerging
+
+Areas to encourage:
+- Continue bilingual exposure
+- Increase social opportunities with peers
+- Art activities for fine motor development
+- Reading together daily
+
+Parent Education Provided:
+- Bilingual language development benefits
+- Eczema management and triggers
+- Toddler nutrition and mealtime behavior
+- Safety for active toddler (climbing, running)
+- Preparing for toilet training
+
+Cultural Considerations:
+- Family maintains traditional Indian diet modifications for toddler
+- Bilingual development encouraged and supported
+- Extended family involvement in care
+- Cultural practices around child-rearing respected
+
+Safety Reminders:
+- Toddler-proofing for increased mobility
+- Car seat forward-facing transition (when ready)
+- Water safety around pools/bath
+- Choking prevention with small objects
+
+Follow-up:
+- Next routine visit at 24 months
+- Developmental screening and growth assessment
+- Complete remaining 18-month vaccinations if any pending
+
+Provider Notes:
+Maya is a delightful, well-developing 18-month-old with excellent family support. Her bilingual development is particularly impressive. Parents are well-educated and engaged in her care. Mild eczema is well-controlled. Continue current developmental activities and cultural food exposure.
+
+Family History:
+- Maternal: Seasonal allergies, eczema in childhood
+- Paternal: No significant medical history
+- Grandparents: Diabetes (maternal grandfather), hypertension (paternal grandmother)
+- No family history of developmental delays
+
+Next Visit Goals:
+- 24-month developmental screening
+- Growth trajectory monitoring
+- Language milestone assessment
+- Toilet training readiness evaluation
+
+Dr. Robert Chen, MD
+Board Certified Pediatrician
+Date: July 15, 2025

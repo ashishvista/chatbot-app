@@ -1,0 +1,201 @@
+Patient Medical History Report
+Baby Aiden Thompson - 24 Months
+
+Patient Information:
+Name: Aiden Michael Thompson
+Date of Birth: July 6, 2023
+Age: 24 months (2 years)
+Gender: Male
+Parents: Jessica and Robert Thompson
+Pediatrician: Dr. Sarah Williams, MD
+Medical Record #: BT-2023-0706
+
+Birth History:
+Birth Weight: 7 lbs 8 oz (3.4 kg)
+Birth Length: 20.5 inches (52.1 cm)
+Head Circumference: 13.8 inches (35.1 cm)
+Gestational Age: 39 weeks, 5 days
+Delivery: Vaginal delivery after induction
+APGAR Scores: 9 at 1 minute, 9 at 5 minutes
+Hospital Stay: 2 days, routine discharge
+
+Feeding History:
+0-3 months: Breastfeeding with some formula supplementation
+3-6 months: Primarily breastfeeding, vitamin D supplementation
+6-9 months: Breastfeeding with solid food introduction
+9-15 months: Continued breastfeeding, variety of table foods
+15-18 months: Gradual weaning process
+18-24 months: Fully weaned, whole milk, complete table foods
+
+Growth History:
+Birth: 7 lbs 8 oz, 20.5 inches
+2 months: 11 lbs 10 oz, 22.8 inches
+4 months: 14 lbs 12 oz, 25 inches
+6 months: 17 lbs 4 oz, 26.5 inches
+9 months: 20 lbs 8 oz, 28.2 inches
+12 months: 23 lbs 2 oz, 30 inches
+15 months: 25 lbs 6 oz, 31.5 inches
+18 months: 27 lbs 2 oz, 32.8 inches
+24 months: 29 lbs 4 oz, 34.5 inches
+
+Current growth percentiles:
+Weight: 80th percentile
+Height: 85th percentile
+Head circumference: 75th percentile
+
+Developmental Milestones Achieved:
+
+Motor Development:
+✓ Held head up (4 weeks)
+✓ Rolled over (3.5 months)
+✓ Sat without support (6 months)
+✓ Crawled (7.5 months)
+✓ Pulled to standing (9 months)
+✓ First steps (12 months)
+✓ Walks independently (13 months)
+✓ Runs without falling (18 months)
+✓ Jumps with both feet (22 months)
+✓ Walks up stairs holding rail (20 months)
+✓ Kicks ball forward (19 months)
+
+Language Development:
+✓ First social smile (4 weeks)
+✓ Cooing sounds (6 weeks)
+✓ Babbling (4 months)
+✓ Says "mama/dada" (8 months)
+✓ First words (10 months)
+✓ Vocabulary of 20 words (18 months)
+✓ Two-word combinations (20 months)
+✓ Vocabulary of 150+ words (24 months)
+✓ Simple sentences (3-4 words) (24 months)
+
+Social/Emotional Development:
+✓ Recognizes parents (birth)
+✓ Separation anxiety (7 months)
+✓ Stranger anxiety (8 months)
+✓ Shows affection (12 months)
+✓ Temper tantrums begin (15 months)
+✓ Parallel play (18 months)
+✓ Shows empathy (22 months)
+✓ Defiant behavior ("No!" phase) (20 months)
+
+Cognitive Development:
+✓ Object permanence (7 months)
+✓ Cause and effect understanding (12 months)
+✓ Pretend play (15 months)
+✓ Sorts shapes and colors (20 months)
+✓ Follows two-step instructions (22 months)
+✓ Names body parts (24 months)
+✓ Beginning counting (1-5) (24 months)
+
+Self-Care Skills:
+✓ Feeds self with spoon (15 months)
+✓ Drinks from regular cup (16 months)
+✓ Helps with undressing (18 months)
+✓ Brushes teeth with help (20 months)
+✓ Shows interest in potty training (22 months)
+✓ Washes hands with help (24 months)
+
+Vaccination Record:
+✓ Complete primary series through 18 months
+✓ DTaP: 2, 4, 6, 15 months
+✓ IPV: 2, 4, 6 months
+✓ MMR: 12 months, 24 months (today)
+✓ Varicella: 12 months, 24 months (today)
+✓ Hepatitis A: 12, 18 months
+✓ PCV13: Complete series
+✓ Influenza: Annual
+
+Medical History:
+
+Illnesses and Events:
+- Multiple minor colds (6 episodes in past year)
+- Bronchiolitis (15 months) - treated at home with supportive care
+- Conjunctivitis (pink eye) (20 months) - treated with antibiotic drops
+- Several episodes of teething-related fussiness and fever
+- Minor cuts and bruises from active play
+
+Allergies:
+- Seasonal allergies (runny nose, watery eyes in spring/fall)
+- No known food allergies
+- Mild skin reaction to certain soaps
+
+Medications:
+- Children's acetaminophen/ibuprofen as needed for fever/discomfort
+- Saline nasal drops for congestion
+- Children's antihistamine during allergy season
+
+Hospitalizations:
+None
+
+Emergency Department Visits:
+None
+
+Urgent Care Visits:
+- Age 20 months: Suspected ear infection (turned out to be wax buildup)
+
+Specialist Consultations:
+None required
+
+Current Health Status (24-month visit):
+
+Physical Examination:
+- General appearance: Active, well-developed toddler
+- Weight: 29 lbs 4 oz (80th percentile)
+- Height: 34.5 inches (85th percentile)
+- Head circumference: 19.2 inches (75th percentile)
+- Temperature: 98.8°F
+- Heart rate: 100 bpm
+- Respiratory rate: 22/min
+- Blood pressure: 85/45 mmHg
+
+Systems Review:
+- HEENT: Normal, good vision and hearing responses
+- Cardiovascular: Regular rate and rhythm, no murmurs
+- Respiratory: Clear breath sounds bilaterally
+- Gastrointestinal: Soft abdomen, excellent appetite
+- Genitourinary: Normal external genitalia
+- Musculoskeletal: Excellent muscle tone and coordination
+- Neurological: Age-appropriate reflexes and responses
+- Skin: Healthy, well-hydrated
+
+Developmental Screening Results:
+- M-CHAT-R (autism screening): Negative
+- Language development: Above average (150+ words)
+- Motor skills: Excellent for age
+- Social-emotional: Appropriate with normal toddler behaviors
+
+Current Concerns/Plan:
+1. Continue balanced toddler diet
+2. Encourage language development through reading and conversation
+3. Begin gentle potty training when ready
+4. Manage seasonal allergies as needed
+5. Safety measures for very active toddler
+6. Screen time limits (less than 1 hour high-quality content)
+7. Next visit at 30 months (2.5 years)
+
+Behavioral Guidance:
+- Normal toddler behaviors: tantrums, saying "no," testing boundaries
+- Positive reinforcement strategies
+- Consistent routines and expectations
+- Safe outlets for physical energy
+
+Parent Education Provided:
+- Toddler nutrition and healthy eating habits
+- Discipline strategies for 2-year-olds
+- Safety measures for climbing, running toddler
+- Potty training readiness signs
+- Language development activities
+- Screen time guidelines
+
+Follow-up:
+- 30-month well-child visit (6 months)
+- Annual dental exam (already scheduled)
+- Contact office for any concerns
+
+Provider Notes:
+Aiden is thriving as a healthy 2-year-old. His development is excellent across all domains. Parents are doing a wonderful job managing typical toddler behaviors. He's ready for more independence and continued learning opportunities. No concerns at this time.
+
+Dr. Sarah Williams, MD
+Board Certified Pediatrician
+Date: July 6, 2025
