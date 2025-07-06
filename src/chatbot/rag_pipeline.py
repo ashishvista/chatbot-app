@@ -384,12 +384,25 @@ class RAGPipeline:
         try:
             logger.info(f"🔍 Processing query: {query}")
             
+            # DEBUG: Print query details
+            print(f"DEBUG: Query length: {len(query)} characters")
+            print(f"DEBUG: Query preview: {query[:100]}...")
+            
             # Get response from QA chain (retrieval + generation)
             result = self.qa_chain({"query": query})
+            
+            # DEBUG: Inspect the result structure
+            print(f"DEBUG: Result keys: {result.keys()}")
+            print(f"DEBUG: Number of source documents: {len(result.get('source_documents', []))}")
             
             # Extract response and source documents
             response = result["result"]
             sources = result.get("source_documents", [])
+            
+            # DEBUG: Print response details
+            print(f"DEBUG: Raw response length: {len(response)} characters")
+            print(f"DEBUG: Response preview: {response[:100]}...")
+            print(f"DEBUG: Full response: '{response}'")  # Show complete response
             
             # Format response with source information for transparency
             formatted_response = self._format_response(response, sources)
