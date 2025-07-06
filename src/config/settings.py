@@ -54,7 +54,8 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
     
     # Directory to cache downloaded models
-    MODEL_PATH: str = "./models"
+    # Use relative path from project root, not from src directory
+    MODEL_PATH: str = "../models"
     
     # === API Keys ===
     # Optional API keys for external services
@@ -72,10 +73,11 @@ class Settings(BaseSettings):
     # These settings control how documents are processed and stored
     
     # Directory containing source documents to be indexed
-    DOCUMENTS_PATH: str = "./data/documents"
+    # Use relative path from project root, not from src directory
+    DOCUMENTS_PATH: str = "../data/documents"
     
     # Directory to store the vector database
-    VECTOR_STORE_PATH: str = "./data/vector_store"
+    VECTOR_STORE_PATH: str = "../data/vector_store"
     
     # Size of text chunks when splitting documents
     # Larger chunks preserve more context but may exceed model limits
