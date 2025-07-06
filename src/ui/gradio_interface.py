@@ -32,8 +32,10 @@ The interface uses Gradio's ChatInterface component which provides:
 import gradio as gr
 import logging
 from typing import List, Tuple
-from ..chatbot.rag_pipeline import RAGPipeline
-from ..config.settings import settings
+
+# Import using absolute imports from the src directory
+from chatbot.rag_pipeline import RAGPipeline
+from config.settings import settings
 
 # Setup logging for interface operations
 logging.basicConfig(level=logging.INFO)

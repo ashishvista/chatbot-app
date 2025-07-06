@@ -45,7 +45,8 @@ from langchain.chains import RetrievalQA
 from langchain_community.llms import HuggingFacePipeline
 from langchain.schema import Document
 
-from ..config.settings import settings
+# Import using absolute imports from the src directory
+from config.settings import settings
 
 # Setup logging to track pipeline operations
 logging.basicConfig(level=logging.INFO)
