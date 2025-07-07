@@ -80,24 +80,24 @@ class Settings(BaseSettings):
     VECTOR_STORE_PATH: str = "../data/vector_store"
     
     # Size of text chunks when splitting documents
-    # Smaller chunks for T5 models with limited context
-    CHUNK_SIZE: int = 400
+    # Very small chunks for T5's 512 token limit
+    CHUNK_SIZE: int = 200
     
     # Overlap between consecutive chunks to maintain continuity
-    CHUNK_OVERLAP: int = 50
+    CHUNK_OVERLAP: int = 25
     
     # === RAG Pipeline Configuration ===
     # These settings control the retrieval and generation behavior
     
     # Number of similar documents to retrieve for each query
-    # Reduced for T5 models to stay within token limits
+    # Minimal retrieval to fit within T5's 512 token limit
     RETRIEVAL_K: int = 2
     
     # Maximum number of new tokens to generate in responses
-    MAX_NEW_TOKENS: int = 256  # T5 works better with shorter outputs
+    MAX_NEW_TOKENS: int = 128  # Reduced to fit within 512 total limit
     
     # Temperature for text generation (0.0 = deterministic, 1.0 = creative)
-    TEMPERATURE: float = 0.3   # Lower temperature for more focused answers
+    TEMPERATURE: float = 0.7   # Lower temperature for more focused answers
     
     # Top-p sampling parameter for nucleus sampling
     TOP_P: float = 0.9
