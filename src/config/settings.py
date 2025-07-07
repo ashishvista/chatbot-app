@@ -102,6 +102,11 @@ class Settings(BaseSettings):
     # Top-p sampling parameter for nucleus sampling
     TOP_P: float = 0.9
     
+    # === Conversation History Configuration ===
+    # Control whether conversation history is used in RAG context
+    USE_CONVERSATION_HISTORY: bool = True  # Disabled by default for medical accuracy
+    MAX_HISTORY_TURNS: int = 2  # Limit history to avoid token overflow
+    
     # === System Configuration ===
     DEBUG_MODE: bool = False  # Disable detailed logging for cleaner output
     DEVICE: str = "cpu"  # Force CPU usage for stability

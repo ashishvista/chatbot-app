@@ -84,17 +84,17 @@ class ChatbotInterface:
     
     def chat_response(self, message: str, history: List[Tuple[str, str]]) -> str:
         """
-        Generate response using RAG pipeline
+        Generate response using RAG pipeline with conversation history
         
         This is the main function that handles user messages:
         1. Validates the message and pipeline state
-        2. Sends the message to the RAG pipeline
+        2. Sends the message to the RAG pipeline with conversation history
         3. Returns the generated response
         4. Handles any errors gracefully
         
         Args:
             message: User's input message
-            history: Chat history (not used but required by Gradio)
+            history: Chat history as list of (user_message, bot_response) tuples
             
         Returns:
             Generated response or error message
@@ -106,8 +106,8 @@ class ChatbotInterface:
             return "Please enter a question or message."
         
         try:
-            # Generate response using the RAG pipeline
-            response = self.rag_pipeline.generate_response(message)
+            # Generate response using the RAG pipeline with conversation history
+            response = self.rag_pipeline.generate_response(message, conversation_history=history)
             return response
             
         except Exception as e:
@@ -186,13 +186,14 @@ class ChatbotInterface:
         - Real-time parameter adjustment
         """
         
-        def advanced_chat(message, history, temperature, max_tokens):
+        def advanced_chat(message, history, temperature, max_tokens, use_history):
             """
             Advanced chat with configurable parameters
             
             Allows users to adjust model behavior in real-time:
             - Temperature: Controls randomness (0.1 = focused, 1.0 = creative)
             - Max tokens: Limits response length
+            - Use history: Whether to include conversation context
             """
             if not self.rag_pipeline:
                 return history + [("System", "❌ Chatbot not initialized")]
@@ -201,15 +202,20 @@ class ChatbotInterface:
                 # Update settings temporarily
                 original_temp = settings.TEMPERATURE
                 original_tokens = settings.MAX_NEW_TOKENS
+                original_history = settings.USE_CONVERSATION_HISTORY
                 
                 settings.TEMPERATURE = temperature
                 settings.MAX_NEW_TOKENS = max_tokens
+                settings.USE_CONVERSATION_HISTORY = use_history
                 
-                response = self.rag_pipeline.generate_response(message)
+                # Pass conversation history if enabled
+                conversation_history = history if use_history else None
+                response = self.rag_pipeline.generate_response(message, conversation_history)
                 
                 # Restore original settings
                 settings.TEMPERATURE = original_temp
                 settings.MAX_NEW_TOKENS = original_tokens
+                settings.USE_CONVERSATION_HISTORY = original_history
                 
                 history.append((message, response))
                 return history, ""
@@ -248,7 +254,8 @@ class ChatbotInterface:
                 
                 with gr.Row():
                     temperature = gr.Slider(0.1, 1.0, value=0.7, label="Temperature")
-                    max_tokens = gr.Slider(50, 1000, value=512, label="Max Tokens")
+                    max_tokens = gr.Slider(50, 1000, value=128, label="Max Tokens")
+                    use_history = gr.Checkbox(value=False, label="Use Conversation History")
                 
                 with gr.Row():
                     submit_btn = gr.Button("Send 📤", variant="primary")
@@ -256,12 +263,12 @@ class ChatbotInterface:
                 
                 submit_btn.click(
                     advanced_chat,
-                    inputs=[msg, chatbot, temperature, max_tokens],
+                    inputs=[msg, chatbot, temperature, max_tokens, use_history],
                     outputs=[chatbot, msg]
                 )
                 msg.submit(
                     advanced_chat,
-                    inputs=[msg, chatbot, temperature, max_tokens],
+                    inputs=[msg, chatbot, temperature, max_tokens, use_history],
                     outputs=[chatbot, msg]
                 )
                 clear_btn.click(lambda: ([], ""), outputs=[chatbot, msg])
@@ -288,6 +295,8 @@ class ChatbotInterface:
                 - **Documents Path**: {settings.DOCUMENTS_PATH}
                 - **Vector Store Path**: {settings.VECTOR_STORE_PATH}
                 - **Device**: {settings.DEVICE}
+                - **Conversation History**: {"Enabled" if settings.USE_CONVERSATION_HISTORY else "Disabled"}
+                - **Max History Turns**: {settings.MAX_HISTORY_TURNS}
                 """)
         
         return demo

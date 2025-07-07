@@ -32,7 +32,7 @@ The pipeline is designed to be:
 
 import os
 import logging
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 from pathlib import Path
 
 import torch
@@ -387,7 +387,7 @@ Answer:"""
             chain_type_kwargs={"prompt": qa_prompt}     # Use custom prompt
         )
     
-    def generate_response(self, query: str) -> str:
+    def generate_response(self, query: str, conversation_history: Optional[List[Tuple[str, str]]] = None) -> str:
         """
         Generate response for user query using the complete RAG pipeline
         
@@ -396,53 +396,55 @@ Answer:"""
         2. Convert user query to embeddings
         3. Search vector store for similar document chunks
         4. Retrieve top K most relevant chunks
-        5. Combine retrieved context with user query
+        5. Combine retrieved context with user query (and optionally conversation history)
         6. Send to language model for response generation
-        7. Format response with source information
-        8. Return final response to user
+        7. Format response with source citations
+        8. Return complete response to user
         
         Args:
-            query: User's question or input text
+            query: User's question or message
+            conversation_history: Optional list of (question, answer) tuples for context
             
         Returns:
             Generated response with source citations
         """
         if not self.qa_chain:
-            return "❌ RAG pipeline not initialized properly."
+            logger.error("❌ QA chain not initialized")
+            return "Sorry, the system is not ready yet. Please try again in a moment."
         
         try:
-            logger.info(f"🔍 Processing query: {query}")
+            logger.info(f"🔍 Processing query: {query[:100]}...")
             
-            # DEBUG: Print query details
-            print(f"DEBUG: Query length: {len(query)} characters")
-            print(f"DEBUG: Query preview: {query[:100]}...")
+            # Format query with conversation history if enabled and provided
+            formatted_query = query
+            if (settings.USE_CONVERSATION_HISTORY and 
+                conversation_history and 
+                len(conversation_history) > 0):
+                # Include limited history to avoid token limit issues
+                recent_history = conversation_history[-settings.MAX_HISTORY_TURNS:]
+                history_context = "\n".join([
+                    f"Previous Q: {q}\nPrevious A: {a}" 
+                    for q, a in recent_history
+                ])
+                formatted_query = f"Conversation History:\n{history_context}\n\nCurrent Question: {query}"
+                logger.info(f"📝 Including {len(recent_history)} previous conversation turns")
             
-            # Get response from QA chain (retrieval + generation)
-            result = self.qa_chain({"query": query})
+            # Use the QA chain to get response with sources
+            result = self.qa_chain.invoke({"query": formatted_query})
             
-            # DEBUG: Inspect the result structure
-            print(f"DEBUG: Result keys: {result.keys()}")
-            print(f"DEBUG: Number of source documents: {len(result.get('source_documents', []))}")
-            
-            # Extract response and source documents
-            response = result["result"]
+            # Extract response and sources
+            response = result.get("result", "").strip()
             sources = result.get("source_documents", [])
             
-            # DEBUG: Print response details
-            print(f"DEBUG: Raw response length: {len(response)} characters")
-            print(f"DEBUG: Response preview: {response[:100]}...")
-            print(f"DEBUG: Full response: '{response}'")  # Show complete response
-            
-            # Format response with source information for transparency
+            # Format response with source citations
             formatted_response = self._format_response(response, sources)
             
+            logger.info(f"✅ Generated response ({len(response)} chars)")
             return formatted_response
             
         except Exception as e:
-            import traceback
-            error_msg = f"Error: {str(e)}\nTraceback: {traceback.format_exc()}"
-            logger.error(f"❌ Error generating response: {error_msg}")
-            return f"Sorry, I encountered an error while processing your question: {str(e)}"
+            logger.error(f"❌ Error generating response: {str(e)}")
+            return f"I apologize, but I encountered an error while processing your question: {str(e)}"
     
     def _format_response(self, response: str, sources: List[Document]) -> str:
         """
