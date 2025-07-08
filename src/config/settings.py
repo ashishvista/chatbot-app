@@ -45,9 +45,19 @@ class Settings(BaseSettings):
     # === Model Configuration ===
     # These settings control which AI models are used
     
+    # Model provider: "huggingface" or "ollama"
+    MODEL_PROVIDER: str = "ollama"
+    
     # Primary language model for text generation
-    # FLAN-T5 is specifically designed for instruction-following and Q&A
-    MODEL_NAME: str = "google/flan-t5-base"
+    # For Ollama: model name (e.g., "deepseek-r1:7b", "llama3.1:8b")
+    # For HuggingFace: full model path (e.g., "google/flan-t5-base")
+    MODEL_NAME: str = "deepseek-r1:7b"
+    
+    # === Ollama Configuration ===
+    # Settings for Ollama server connection
+    OLLAMA_BASE_URL: str = "http://localhost:11434"  # Default Ollama server URL
+    OLLAMA_TIMEOUT: int = 120  # Timeout in seconds for Ollama requests
+    OLLAMA_KEEP_ALIVE: str = "5m"  # How long to keep model loaded in memory
     
     # Embedding model for document vectorization
     # MPNet provides better semantic understanding than MiniLM
@@ -55,7 +65,7 @@ class Settings(BaseSettings):
     
     # Directory to cache downloaded models
     # Use relative path from project root, not from src directory
-    MODEL_PATH: str = "../models"
+    MODEL_PATH: str = "models"
     
     # === API Keys ===
     # Optional API keys for external services
@@ -74,38 +84,38 @@ class Settings(BaseSettings):
     
     # Directory containing source documents to be indexed
     # Use relative path from project root, not from src directory
-    DOCUMENTS_PATH: str = "../data/documents"
+    DOCUMENTS_PATH: str = "data/documents"
     
     # Directory to store the vector database
-    VECTOR_STORE_PATH: str = "../data/vector_store"
+    VECTOR_STORE_PATH: str = "data/vector_store"
     
     # Size of text chunks when splitting documents
-    # Very small chunks for T5's 512 token limit
-    CHUNK_SIZE: int = 200
+    # Increased for better context with larger models
+    CHUNK_SIZE: int = 800
     
     # Overlap between consecutive chunks to maintain continuity
-    CHUNK_OVERLAP: int = 25
+    CHUNK_OVERLAP: int = 100
     
     # === RAG Pipeline Configuration ===
     # These settings control the retrieval and generation behavior
     
     # Number of similar documents to retrieve for each query
-    # Minimal retrieval to fit within T5's 512 token limit
-    RETRIEVAL_K: int = 2
+    # Increased for better context with larger models
+    RETRIEVAL_K: int = 4
     
     # Maximum number of new tokens to generate in responses
-    MAX_NEW_TOKENS: int = 128  # Reduced to fit within 512 total limit
+    MAX_NEW_TOKENS: int = 512  # Increased for more detailed responses
     
     # Temperature for text generation (0.0 = deterministic, 1.0 = creative)
-    TEMPERATURE: float = 0.7   # Lower temperature for more focused answers
+    TEMPERATURE: float = 0.3   # Lower temperature for more focused medical answers
     
     # Top-p sampling parameter for nucleus sampling
     TOP_P: float = 0.9
     
     # === Conversation History Configuration ===
     # Control whether conversation history is used in RAG context
-    USE_CONVERSATION_HISTORY: bool = True  # Disabled by default for medical accuracy
-    MAX_HISTORY_TURNS: int = 2  # Limit history to avoid token overflow
+    USE_CONVERSATION_HISTORY: bool = True  # Enable conversation context
+    MAX_HISTORY_TURNS: int = 3  # Keep more history with larger context window
     
     # === System Configuration ===
     DEBUG_MODE: bool = False  # Disable detailed logging for cleaner output

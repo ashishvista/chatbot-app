@@ -47,6 +47,7 @@ from langchain.schema import Document
 
 # Import using absolute imports from the src directory
 from config.settings import settings
+from chatbot.ollama_llm import OllamaLLM
 
 # Setup logging to track pipeline operations
 logging.basicConfig(level=logging.INFO)
@@ -260,84 +261,117 @@ class RAGPipeline:
     
     def _setup_llm(self):
         """
-        Setup Hugging Face language model for text generation
+        Setup language model for text generation
         
-        Language Model Pipeline:
-        1. Load tokenizer (converts text to tokens)
-        2. Load model weights (neural network for generation)
-        3. Create generation pipeline with parameters
-        4. Wrap in LangChain interface
+        Model Provider Support:
+        - Ollama: Local inference server (recommended for performance)
+        - HuggingFace: Direct model loading via transformers
         
-        Model Support:
-        - T5/FLAN-T5: Text-to-text models (use AutoModelForSeq2SeqLM)
-        - GPT models: Causal language models (use AutoModelForCausalLM)
+        Ollama Benefits:
+        - Faster inference with optimized backends
+        - Better memory management
+        - Support for larger models
+        - Automatic model management
         
         Generation Parameters:
         - max_new_tokens: Limit response length
         - temperature: Control randomness (0.3 = focused for Q&A)
         - top_p: Nucleus sampling for coherent responses
         """
-        logger.info(f"🤖 Loading language model: {self.model_name}")
-        logger.info(f"🔧 Using device: {self.device}")
+        logger.info(f"🤖 Setting up language model: {self.model_name}")
+        logger.info(f"🔧 Model provider: {settings.MODEL_PROVIDER}")
         
         try:
-            # Load tokenizer for text preprocessing
-            tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-            if tokenizer.pad_token is None:
-                tokenizer.pad_token = tokenizer.eos_token
-            
-            # Determine if this is a T5-based model or causal LM
-            is_t5_model = any(model_type in self.model_name.lower() for model_type in ['t5', 'flan'])
-            
-            # Load the appropriate model type
-            if is_t5_model:
-                logger.info("📝 Loading T5/FLAN-T5 text-to-text model")
-                model = AutoModelForSeq2SeqLM.from_pretrained(
-                    self.model_name,
-                    torch_dtype=torch.float32,  # Use float32 for CPU
-                    trust_remote_code=True
+            if settings.MODEL_PROVIDER.lower() == "ollama":
+                # Use Ollama for fast local inference
+                logger.info("🚀 Using Ollama for local inference")
+                self.llm = OllamaLLM.from_settings(
+                    settings,
+                    system_prompt="You are a helpful AI assistant. Use the provided context to answer questions accurately and concisely. If the context doesn't contain relevant information, say so clearly."
                 )
-                task = "text2text-generation"
+                
+                # Verify Ollama connection and model availability
+                model_info = self.llm.get_model_info()
+                if 'error' in model_info:
+                    logger.error(f"❌ Ollama model error: {model_info['error']}")
+                    raise Exception(f"Ollama model setup failed: {model_info['error']}")
+                else:
+                    logger.info(f"✅ Ollama model '{self.model_name}' loaded successfully")
+                    logger.info(f"📊 Model size: {model_info.get('size', 'Unknown')}")
+                
             else:
-                logger.info("💬 Loading causal language model")
-                model = AutoModelForCausalLM.from_pretrained(
-                    self.model_name,
-                    torch_dtype=torch.float32,  # Use float32 for CPU
-                    trust_remote_code=True
-                )
-                task = "text-generation"
+                # Fallback to HuggingFace transformers
+                logger.info("🤗 Using HuggingFace transformers")
+                self._setup_huggingface_llm()
             
-            # Create generation pipeline with CPU-optimized settings
-            pipeline_kwargs = {
-                "model": model,
-                "tokenizer": tokenizer,
-                "max_new_tokens": settings.MAX_NEW_TOKENS,
-                "do_sample": True,
-                "temperature": settings.TEMPERATURE,
-                "top_p": settings.TOP_P,
-                "pad_token_id": tokenizer.eos_token_id,
-                "device": -1,  # Force CPU usage
-            }
-            
-            # Add task-specific parameters
-            if is_t5_model:
-                # T5 models don't need return_full_text parameter
-                pass
-            else:
-                pipeline_kwargs.update({
-                    "return_full_text": False,  # Return only new text
-                    "repetition_penalty": 1.1,
-                    "eos_token_id": tokenizer.eos_token_id,
-                })
-            
-            pipe = pipeline(task, **pipeline_kwargs)
-            self.llm = HuggingFacePipeline(pipeline=pipe)
-            
-            logger.info(f"✅ Model loaded successfully on CPU")
+            logger.info(f"✅ Language model setup completed")
             
         except Exception as e:
-            logger.error(f"❌ Error loading model: {str(e)}")
+            logger.error(f"❌ Error setting up language model: {str(e)}")
+            logger.info("💡 Tip: Make sure Ollama is running if using Ollama provider")
+            logger.info("💡 Tip: Run 'ollama serve' to start the Ollama server")
             raise
+    
+    def _setup_huggingface_llm(self):
+        """
+        Fallback method to setup HuggingFace transformers LLM
+        
+        This method is used when MODEL_PROVIDER is set to "huggingface"
+        or when Ollama setup fails.
+        """
+        logger.info(f"🤗 Loading HuggingFace model: {self.model_name}")
+        
+        # Load tokenizer for text preprocessing
+        tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+        
+        # Determine if this is a T5-based model or causal LM
+        is_t5_model = any(model_type in self.model_name.lower() for model_type in ['t5', 'flan'])
+        
+        # Load the appropriate model type
+        if is_t5_model:
+            logger.info("📝 Loading T5/FLAN-T5 text-to-text model")
+            model = AutoModelForSeq2SeqLM.from_pretrained(
+                self.model_name,
+                torch_dtype=torch.float32,  # Use float32 for CPU
+                trust_remote_code=True
+            )
+            task = "text2text-generation"
+        else:
+            logger.info("💬 Loading causal language model")
+            model = AutoModelForCausalLM.from_pretrained(
+                self.model_name,
+                torch_dtype=torch.float32,  # Use float32 for CPU
+                trust_remote_code=True
+            )
+            task = "text-generation"
+        
+        # Create generation pipeline with CPU-optimized settings
+        pipeline_kwargs = {
+            "model": model,
+            "tokenizer": tokenizer,
+            "max_new_tokens": settings.MAX_NEW_TOKENS,
+            "do_sample": True,
+            "temperature": settings.TEMPERATURE,
+            "top_p": settings.TOP_P,
+            "pad_token_id": tokenizer.eos_token_id,
+            "device": -1,  # Force CPU usage
+        }
+        
+        # Add task-specific parameters
+        if is_t5_model:
+            # T5 models don't need return_full_text parameter
+            pass
+        else:
+            pipeline_kwargs.update({
+                "return_full_text": False,  # Return only new text
+                "repetition_penalty": 1.1,
+                "eos_token_id": tokenizer.eos_token_id,
+            })
+        
+        pipe = pipeline(task, **pipeline_kwargs)
+        self.llm = HuggingFacePipeline(pipeline=pipe)
     
     def _setup_qa_chain(self):
         """
