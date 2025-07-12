@@ -53,8 +53,8 @@ class Settings(BaseSettings):
     MODEL_NAME: str = "Qwen/Qwen3-8B"
     
     # Embedding model for document vectorization
-    # MPNet provides better semantic understanding than MiniLM
-    EMBEDDING_MODEL: str = "sentence-transformers/all-mpnet-base-v2"
+    # Using Qwen3-Embedding-8B for optimal compatibility with Qwen3-8B model
+    EMBEDDING_MODEL: str = "Qwen/Qwen3-Embedding-8B"
     
     # Directory to cache downloaded models
     # Use relative path from project root, not from src directory

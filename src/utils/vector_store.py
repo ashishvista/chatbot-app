@@ -24,7 +24,7 @@ from pathlib import Path
 
 # LangChain imports for document handling and vector operations
 from langchain.schema import Document
-from langchain_community.embeddings import HuggingFaceEmbeddings  # For creating embeddings
+from langchain_huggingface import HuggingFaceEmbeddings  # For creating embeddings
 from langchain_community.vectorstores import FAISS               # Facebook AI Similarity Search
 import numpy as np                                                # Numerical operations
 
@@ -51,20 +51,21 @@ class VectorStore:
     effective semantic search for the RAG system.
     """
     
-    def __init__(self, embedding_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
+    def __init__(self, embedding_model_name: str = "Qwen/Qwen3-Embedding-8B"):
         """
         Initialize the VectorStore with specified embedding model
         
         Args:
             embedding_model_name (str): Name of the HuggingFace embedding model
-                                      Default: "sentence-transformers/all-MiniLM-L6-v2"
-                                      - Fast, lightweight, good for general text
-                                      - Other options: "all-mpnet-base-v2" (higher quality)
+                                      Default: "Qwen/Qwen3-Embedding-8B"
+                                      - High-quality embeddings optimized for Qwen models
+                                      - Better semantic understanding than general models
+                                      - Optimal compatibility with Qwen3-8B language model
         
         The embedding model is crucial for RAG performance:
-        - Larger models: Better semantic understanding, slower processing
-        - Smaller models: Faster processing, adequate for most use cases
-        - Sentence transformers: Optimized for semantic similarity tasks
+        - Qwen embeddings: Best compatibility with Qwen language models
+        - Higher quality: Better semantic understanding for domain-specific content
+        - Model alignment: Same architecture family as the generation model
         """
         self.embedding_model_name = embedding_model_name
         

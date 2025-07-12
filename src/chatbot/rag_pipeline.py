@@ -8,7 +8,7 @@ How RAG Works:
 1. INDEXING PHASE:
    - Documents are loaded from the specified directory
    - Text is split into manageable chunks (1000 chars with 200 overlap)
-   - Each chunk is converted to embeddings using sentence-transformers
+   - Each chunk is converted to embeddings using Qwen3-Embedding-8B
    - Embeddings are stored in a FAISS vector database for fast similarity search
 
 2. QUERY PHASE:
@@ -18,7 +18,7 @@ How RAG Works:
    - Model generates a response based on the provided context
 
 Key Components:
-- HuggingFace Transformers: For embeddings and text generation
+- HuggingFace Transformers: For embeddings (Qwen3-Embedding-8B) and text generation (Qwen3-8B)
 - FAISS: Vector database for efficient similarity search
 - LangChain: Framework for chaining retrieval and generation
 - Gradio: Web interface for user interaction
@@ -38,7 +38,7 @@ from pathlib import Path
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM, pipeline
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain.chains import RetrievalQA
@@ -64,9 +64,9 @@ class RAGPipeline:
     4. Query Processing & Response Generation
     
     Architecture:
-    - Embeddings: sentence-transformers for semantic understanding
+    - Embeddings: Qwen3-Embedding-8B for semantic understanding
     - Vector Store: FAISS for fast similarity search
-    - LLM: HuggingFace transformers for text generation
+    - LLM: Qwen3-8B for text generation
     - Chain: LangChain RetrievalQA for coordinating retrieval + generation
     """
     
@@ -148,10 +148,10 @@ class RAGPipeline:
         2. Similar texts have similar vectors (semantic similarity)
         3. Enable fast similarity search using vector operations
         
-        Model: sentence-transformers/all-MiniLM-L6-v2
-        - Optimized for semantic similarity tasks
-        - Good balance of speed vs quality
-        - 384-dimensional embeddings
+        Model: Qwen/Qwen3-Embedding-8B
+        - Optimized for compatibility with Qwen3-8B language model
+        - High-quality embeddings with 8B parameters
+        - Better semantic understanding for domain-specific content
         """
         logger.info("📊 Loading embeddings model...")
         
