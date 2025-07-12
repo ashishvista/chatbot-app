@@ -49,8 +49,6 @@ def main():
     # Display current configuration for debugging
     logger.info(f"🔧 Model Provider: {settings.MODEL_PROVIDER}")
     logger.info(f"🤖 Model: {settings.MODEL_NAME}")
-    if settings.MODEL_PROVIDER.lower() == "ollama":
-        logger.info(f"🌐 Ollama URL: {settings.OLLAMA_BASE_URL}")
     logger.info(f"📚 Documents path: {settings.DOCUMENTS_PATH}")
     logger.info(f"🌐 Starting server on {settings.GRADIO_HOST}:{settings.GRADIO_PORT}")
     

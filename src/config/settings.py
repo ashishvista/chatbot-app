@@ -45,19 +45,12 @@ class Settings(BaseSettings):
     # === Model Configuration ===
     # These settings control which AI models are used
     
-    # Model provider: "huggingface" or "ollama"
-    MODEL_PROVIDER: str = "ollama"
+    # Model provider: "huggingface" (now using Qwen models exclusively)
+    MODEL_PROVIDER: str = "huggingface"
     
     # Primary language model for text generation
-    # For Ollama: model name (e.g., "deepseek-r1:7b", "llama3.1:8b")
-    # For HuggingFace: full model path (e.g., "google/flan-t5-base")
-    MODEL_NAME: str = "deepseek-r1:7b"
-    
-    # === Ollama Configuration ===
-    # Settings for Ollama server connection
-    OLLAMA_BASE_URL: str = "http://localhost:11434"  # Default Ollama server URL
-    OLLAMA_TIMEOUT: int = 120  # Timeout in seconds for Ollama requests
-    OLLAMA_KEEP_ALIVE: str = "5m"  # How long to keep model loaded in memory
+    # Using Qwen3-8B for better performance and capabilities
+    MODEL_NAME: str = "Qwen/Qwen3-8B"
     
     # Embedding model for document vectorization
     # MPNet provides better semantic understanding than MiniLM
@@ -68,9 +61,9 @@ class Settings(BaseSettings):
     MODEL_PATH: str = "models"
     
     # === API Keys ===
-    # Optional API keys for external services
-    OPENAI_API_KEY: Optional[str] = None  # For OpenAI compatibility
-    HUGGINGFACE_API_KEY: Optional[str] = None  # For Hugging Face Hub access
+    # API keys for external services (optional)
+    HUGGINGFACE_API_KEY: Optional[str] = None  # For Hugging Face Hub access (optional for public models)
+    OPENAI_API_KEY: Optional[str] = None  # For OpenAI compatibility (optional)
     
     # === Gradio UI Configuration ===
     # These settings control the web interface appearance and behavior

@@ -2,20 +2,18 @@
 # Copy this file to .env and modify the values as needed
 
 # === Model Configuration ===
-# Language model for text generation
-MODEL_NAME=microsoft/DialoGPT-medium
+# Language model for text generation using Qwen3-8B (local inference)
+MODEL_NAME=Qwen/Qwen3-8B
+MODEL_PROVIDER=huggingface
 
 # Embedding model for document vectorization
-EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+EMBEDDING_MODEL=sentence-transformers/all-mpnet-base-v2
 
 # Directory to cache downloaded models
 MODEL_PATH=./models
 
 # === API Keys (Optional) ===
-# OpenAI API key for compatibility (if using OpenAI models)
-OPENAI_API_KEY=your_openai_api_key_here
-
-# Hugging Face API key for model downloads
+# Hugging Face API key for model downloads (optional for public models)
 HUGGINGFACE_API_KEY=your_huggingface_api_key_here
 
 # === Gradio Web Interface ===

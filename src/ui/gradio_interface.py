@@ -168,7 +168,8 @@ class ChatbotInterface:
                 height=500,
                 bubble_full_width=False,
                 show_label=False,
-                show_copy_button=True
+                show_copy_button=True,
+                type='messages'
             )
         )
         
@@ -246,7 +247,7 @@ class ChatbotInterface:
             gr.Markdown(settings.GRADIO_DESCRIPTION)
             
             with gr.Tab("💬 Chat"):
-                chatbot = gr.Chatbot(height=400, show_copy_button=True)
+                chatbot = gr.Chatbot(height=400, show_copy_button=True, type='messages')
                 msg = gr.Textbox(
                     placeholder="Ask me anything about your documents...",
                     label="Your Message"

@@ -28,7 +28,8 @@ User Query → Embedding Model → Vector Search → Document Retrieval → Lang
 
 ### Technical Stack
 
-- **Language Model**: Microsoft DialoGPT (conversational AI)
+- **Language Model**: Qwen3-8B (local inference, no API keys required)
+- **Framework**: Hugging Face Transformers (local model loading)
 - **Embeddings**: Sentence Transformers (semantic understanding)
 - **Vector Database**: FAISS (fast similarity search)
 - **Framework**: LangChain (RAG orchestration)
