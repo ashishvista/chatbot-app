@@ -77,10 +77,10 @@ class Settings(BaseSettings):
     
     # Directory containing source documents to be indexed
     # Use relative path from project root, not from src directory
-    DOCUMENTS_PATH: str = "data/documents"
+    DOCUMENTS_PATH: str = str(Path(os.getenv("PROJECT_ROOT", Path(__file__).parent.parent.parent)).joinpath("data/documents").resolve())
     
     # Directory to store the vector database
-    VECTOR_STORE_PATH: str = "data/vector_store"
+    VECTOR_STORE_PATH: str = str(Path(os.getenv("PROJECT_ROOT", Path(__file__).parent.parent.parent)).joinpath("data/vector_store").resolve())
     
     # Size of text chunks when splitting documents
     # Increased for better context with larger models
