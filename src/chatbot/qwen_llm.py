@@ -28,7 +28,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from langchain.llms.base import LLM
 from langchain.callbacks.manager import CallbackManagerForLLMRun
-from langchain_community.llms import HuggingFacePipeline
+from langchain_huggingface import HuggingFacePipeline
 from pydantic import Field
 
 logger = logging.getLogger(__name__)
@@ -133,7 +133,7 @@ class QwenLLM(LLM):
         **kwargs: Any,
     ) -> str:
         """
-        Call the Qwen model with the given prompt
+        Call the Qwen model with the given prompt using chat template format
         
         Args:
             prompt: The input prompt to send to the model
@@ -145,8 +145,8 @@ class QwenLLM(LLM):
             Generated text response from the model
         """
         try:
-            # Format prompt with system message if provided
-            formatted_prompt = self._format_prompt(prompt)
+            # Format prompt using chat template with role/content messages
+            formatted_prompt = self._format_prompt_with_chat_template(prompt)
             
             logger.debug(f"Sending request to Qwen model: {self.model}")
             
@@ -173,9 +173,54 @@ class QwenLLM(LLM):
         except Exception as e:
             logger.error(f"Error calling Qwen model: {str(e)}")
             return f"Error: Failed to generate response. {str(e)}"
+
+    def _format_prompt_with_chat_template(self, prompt: str) -> str:
+        """
+        Format the prompt using Qwen's chat template with role/content messages
+        
+        Args:
+            prompt: The raw prompt text
+            
+        Returns:
+            Formatted prompt using the model's chat template
+        """
+        try:
+            # Create messages list with role/content format
+            messages = []
+            
+            # Add system message if provided
+            if self.system_prompt:
+                messages.append({
+                    "role": "system",
+                    "content": self.system_prompt
+                })
+            
+            # Add user message
+            messages.append({
+                "role": "user", 
+                "content": prompt
+            })
+            
+            logger.debug(f"Chat template messages: {messages}")
+            
+            # Use the tokenizer's apply_chat_template method
+            formatted_prompt = self.tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+            
+            logger.debug(f"Formatted prompt length: {len(formatted_prompt)} characters")
+            
+            return formatted_prompt
+            
+        except Exception as e:
+            logger.warning(f"Failed to use chat template, falling back to simple format: {str(e)}")
+            # Fallback to simple format if chat template fails
+            return self._format_prompt_simple(prompt)
     
-    def _format_prompt(self, prompt: str) -> str:
-        """Format the prompt with system message if provided"""
+    def _format_prompt_simple(self, prompt: str) -> str:
+        """Fallback simple prompt formatting"""
         if self.system_prompt:
             return f"System: {self.system_prompt}\n\nUser: {prompt}\n\nAssistant:"
         else:
@@ -189,7 +234,7 @@ class QwenLLM(LLM):
         **kwargs: Any,
     ) -> Iterator[str]:
         """
-        Stream the response from Qwen model
+        Stream the response from Qwen model using chat template format
         
         Args:
             prompt: The input prompt to send to the model
@@ -201,8 +246,7 @@ class QwenLLM(LLM):
             Chunks of generated text as they become available
         """
         try:
-            # For now, we'll use the non-streaming version and yield the full response
-            # This can be enhanced later if streaming support is added to qwen_agent
+            # Use the same chat template formatting as _call
             response = self._call(prompt, stop, run_manager, **kwargs)
             
             # Simulate streaming by yielding chunks

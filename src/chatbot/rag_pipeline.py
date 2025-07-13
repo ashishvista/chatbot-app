@@ -42,7 +42,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain.chains import RetrievalQA
-from langchain_community.llms import HuggingFacePipeline
+from langchain_huggingface import HuggingFacePipeline
 from langchain.schema import Document
 
 # Import using absolute imports from the src directory
@@ -323,14 +323,18 @@ class RAGPipeline:
             search_kwargs={"k": settings.RETRIEVAL_K}   # Retrieve top K documents
         )
         
-        # Custom prompt template for better DialoGPT compatibility
+        # Custom prompt template optimized for Qwen models using chat format
         from langchain.prompts import PromptTemplate
-        template = """Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+        
+        # Create a template that formats messages for apply_chat_template()
+        template = """Based on the following context, please answer the question. If the context doesn't contain enough information to answer the question, say so clearly.
 
+Context:
 {context}
 
 Question: {question}
-Answer:"""
+
+Please provide a helpful and accurate answer based on the context provided."""
         
         qa_prompt = PromptTemplate(
             template=template,

@@ -54,7 +54,7 @@ class Settings(BaseSettings):
     
     # Embedding model for document vectorization
     # Using Qwen3-Embedding-8B for optimal compatibility with Qwen3-8B model
-    EMBEDDING_MODEL: str = "Qwen/Qwen3-Embedding-8B"
+    EMBEDDING_MODEL: str = "Qwen/Qwen3-Embedding-4B"
     
     # Directory to cache downloaded models
     # Use relative path from project root, not from src directory
