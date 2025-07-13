@@ -30,7 +30,7 @@ User Query → Embedding Model → Vector Search → Document Retrieval → Lang
 
 - **Language Model**: Qwen3-8B (local inference, no API keys required)
 - **Framework**: Hugging Face Transformers (local model loading)
-- **Embeddings**: Sentence Transformers (semantic understanding)
+- **Embeddings**: Qwen3-Embedding-8B (optimized for Qwen models)
 - **Vector Database**: FAISS (fast similarity search)
 - **Framework**: LangChain (RAG orchestration)
 - **UI**: Gradio (modern web interface)
@@ -179,8 +179,8 @@ Create a `.env` file in the project root:
 
 ```env
 # Model Configuration
-MODEL_NAME=microsoft/DialoGPT-medium
-EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+MODEL_NAME=Qwen/Qwen3-8B
+EMBEDDING_MODEL=Qwen/Qwen3-Embedding-8B
 
 # API Keys (Optional)
 OPENAI_API_KEY=your_openai_key_here
@@ -210,15 +210,15 @@ DEVICE=auto
 You can use different models by changing the configuration:
 
 **Language Models:**
-- `microsoft/DialoGPT-small` - Faster, less memory
-- `microsoft/DialoGPT-medium` - Balanced (default)
-- `microsoft/DialoGPT-large` - Better quality, more memory
-- `facebook/blenderbot-400M-distill` - Alternative option
+- `Qwen/Qwen3-8B` - High-quality, 8B parameters (default)
+- `Qwen/Qwen3-4B` - Faster alternative, 4B parameters
+- `Qwen/Qwen3-1.8B` - Lightweight option for limited resources
+- `Qwen/Qwen3-14B` - Premium quality, requires more memory
 
 **Embedding Models:**
-- `sentence-transformers/all-MiniLM-L6-v2` - Fast, good quality (default)
-- `sentence-transformers/all-mpnet-base-v2` - Better quality, slower
-- `sentence-transformers/distilbert-base-nli-stsb-mean-tokens` - Lightweight
+- `Qwen/Qwen3-Embedding-8B` - Optimized for Qwen models (default)
+- `sentence-transformers/all-mpnet-base-v2` - General purpose alternative
+- `sentence-transformers/all-MiniLM-L6-v2` - Lightweight option
 
 ## 🗂️ Project Structure
 

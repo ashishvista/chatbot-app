@@ -48,11 +48,12 @@ def debug_embeddings():
     print("\n=== DEBUGGING EMBEDDINGS ===")
     
     try:
-        from langchain_community.embeddings import HuggingFaceEmbeddings
+        from langchain_huggingface import HuggingFaceEmbeddings
+        from config.settings import settings
         
         print("🔄 Loading embeddings model...")
         embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2"
+            model_name=settings.EMBEDDING_MODEL
         )
         
         # Test embeddings with sample text
